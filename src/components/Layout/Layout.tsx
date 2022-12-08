@@ -5,7 +5,7 @@ import './Layout';
 
 function Layout() {
   return (
-    <div>
+    <div className='container'>
       <Header />
       <main></main>
       <Footer />

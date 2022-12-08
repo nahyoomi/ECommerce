@@ -1,0 +1,49 @@
+@import '../../vars';
+.header{
+   flex-grow: 1; 
+   background-color: $primary-color;
+   &_bar{
+    position: static;
+   }
+   &_toolbar{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    margin: 0;
+    &--menu {
+        padding: 0 12px;
+        svg{
+            font-size: 30px;
+            color: $Primary-titles;
+        }
+    }
+    &--cart{
+        padding: 0 12px;
+        display: flex;
+        svg{
+            font-size: 30px;
+            color: $Primary-titles;
+        }
+        &-pop{
+            span{
+                background-color: #F8475F;
+                border-radius: 100%;
+                color: #FFFFFF;
+                padding: 0 4px;
+                width: 8px;
+                font-size: 12px;
+            }
+        }
+    }
+    &--title{
+        padding: 0 12px;
+        h2{
+            font-weight: 900;
+            margin: 12px;
+            font-size: 30px;
+        }
+    }
+    }
+}

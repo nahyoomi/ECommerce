@@ -1,0 +1,27 @@
+.boxing {
+    position: absolute;
+    background-color: #F2F2F2;
+    height: 100px;
+    width: 180px;
+    padding: 5px;
+    border-radius: 5px;
+    &_modal{
+        display: flex;
+        align-items: baseline;
+        padding-bottom: 5px;
+        &--heading{
+            padding-right: 40px;
+        .btn_CloseModal{
+            background: none;
+            border: none;
+            font-size: 16px;
+            padding: 0px 5px;  
+        }
+        }  
+    }
+    &_content{
+        span{
+            font-weight: bold;
+        }
+    } 
+}
