@@ -28,9 +28,9 @@
         }
         &-pop{
             span{
-                background-color: #F8475F;
+                background-color: $details;
                 border-radius: 100%;
-                color: #FFFFFF;
+                color: $primary-color;
                 padding: 0 4px;
                 width: 8px;
                 font-size: 12px;
