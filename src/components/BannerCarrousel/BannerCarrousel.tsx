@@ -5,11 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
-
-export interface IDataOnlyProps  {
-  adjustment: number
-  setAdjustment:React.Dispatch<React.SetStateAction<number>>
-}
+import {IDataOnlyProps} from '../../types';
 
 function BannerCarrousel({setAdjustment, adjustment}:IDataOnlyProps) {
 

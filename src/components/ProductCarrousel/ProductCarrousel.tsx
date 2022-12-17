@@ -7,18 +7,8 @@ import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper";
 import { HiOutlineStar } from "react-icons/hi2";
 import images from '../../assets/images';
-
-const ChangeShelf = (adjustment : number) => {
-  if(adjustment <= 850){
-    return 2;
-  }
-    return 4;
-}
-export interface IDataOnlyProps  {
-  adjustment: number
-  setAdjustment:React.Dispatch<React.SetStateAction<number>>
-}
- 
+import {IDataOnlyProps} from '../../types';
+import {ChangeShelf} from '../../services';
 
 function ProductCarrousel({setAdjustment, adjustment}:IDataOnlyProps) {
 
