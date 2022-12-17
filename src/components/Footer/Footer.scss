@@ -3,10 +3,16 @@
     background-color: $Primary-titles;
     color: $primary-color;
     padding: 27px;
+    @media(min-width: $desktop){
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
     &_location{
         h3{
             font-size: 22px;
             margin: 0;
+            padding-bottom: 14px;
         }
         hr{
             margin: 0;

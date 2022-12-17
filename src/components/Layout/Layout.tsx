@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import BannerCarrousel from '../BannerCarrousel/BannerCarrousel';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
@@ -8,12 +8,14 @@ import './Layout.scss'
 
 
 function Layout() {
+  const [adjustment, setAdjustment ] = useState(window.innerWidth);
+
   return (
     <div className='container'>
       <Header />
       <main>
-        <BannerCarrousel />
-        <ProductCarrousel />
+        <BannerCarrousel setAdjustment={setAdjustment} adjustment={adjustment}/>
+        <ProductCarrousel setAdjustment={setAdjustment} adjustment={adjustment}/>
         <SubscriptionForm />
       </main>
       <Footer />

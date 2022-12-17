@@ -3,18 +3,27 @@
     display: flex;
     justify-content: center;
     padding: 0 25px;
+    @media (min-width: 1025px){
+        width: 100%;
+        padding: 0 50px;
+    }
     &_icon{
         position: absolute;
         right: 25px;
         top: 70px;
         font-size: 25px;
+        @media (min-width: 1025px){
+            position: relative;
+            top: 5px;
+        }
     }
     input{
-        width: 430px;
+        width: 100%;
         height: 28px;
         padding: 5px 10px;
         border: none;
         border-bottom: 1px solid;
         letter-spacing: 1px;
     }
+
 }

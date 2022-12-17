@@ -4,6 +4,11 @@
    background-color: $primary-color;
    &_bar{
     position: static;
+    .searchMobile {
+        @media (min-width:$desktop){
+            display: none;
+        }
+    }
    }
    &_toolbar{
     list-style: none;
@@ -14,9 +19,20 @@
     margin: 0;
     &--menu {
         padding: 0 12px;
+        @media (min-width: $desktop){
+            display: none;
+        }
         svg{
             font-size: 30px;
             color: $Primary-titles;
+        }
+    }
+
+    .searchDesktop {
+        display: none;
+        @media (min-width: $desktop){
+            display:flex;
+            width: 100%;
         }
     }
     &--cart{

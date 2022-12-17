@@ -23,6 +23,7 @@ export default function Header(){
          <li className="header_toolbar--title">
             <h2>SHOPIT!</h2>
          </li>
+         <li className="searchDesktop"><Search /></li>
          <li className="header_toolbar--cart">
             <TiShoppingCart></TiShoppingCart>
             <div className="header_toolbar--cart-pop">
@@ -30,7 +31,9 @@ export default function Header(){
             </div>  
          </li>
         </ul>
-        <Search />
+        <div className="searchMobile">
+          <Search />
+        </div>
       </div>
     </header>
   )
