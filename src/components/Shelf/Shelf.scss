@@ -1,0 +1,20 @@
+@import '../../Styles/vars';
+
+.cardContainer{
+    position: relative;
+    &_disscount{
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        z-index: 12;
+        color: $primary-color;
+        font-weight: bold;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 40px solid #F8475F;
+        border-right: 40px solid #F8475F;
+        border-bottom: 40px solid transparent;
+        border-left: 40px solid transparent;
+    }
+}

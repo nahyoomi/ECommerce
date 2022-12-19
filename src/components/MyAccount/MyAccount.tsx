@@ -1,11 +1,14 @@
 import React from 'react'
 import './MyAccount.scss';
-import { HiOutlineUser } from "react-icons/hi";
+import { TiUser } from "react-icons/ti";
 
 function MyAccount() {
   return (
     <div className='userBtn'>
-        <button><HiOutlineUser></HiOutlineUser> My Account</button>
+        <span className='userBtn_box'>
+          <TiUser></TiUser>
+          <span className='myAccount'>My Account</span>
+        </span>
     </div>
   )
 }

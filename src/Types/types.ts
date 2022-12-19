@@ -16,6 +16,6 @@ export type IProduct = {
             value: number;
         }[];
 }
-export type IWomanProps  = {
-    woman: IProduct
+export type IitemProps  = {
+    item: IProduct
 }
