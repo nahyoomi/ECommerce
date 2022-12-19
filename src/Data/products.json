@@ -1,0 +1,123 @@
+
+[
+    {
+      "productId": 1,
+      "productName": "SAPATO FLOATER PRETO",
+      "category": "Woman",
+      "stars": 1,
+      "imageUrl": "https://www.pngall.com/wp-content/uploads/2016/03/Shoes-Free-Download-PNG.png",
+      "listPrice": null,
+      "price": 25990,
+      "installments": [
+        {
+          "quantity": 9,
+          "value": 2887
+        }
+      ]
+    },
+    {
+      "productId": 2,
+      "productName": "SANDÁLIA LINHO BROWN",
+      "category": "Woman",
+      "stars": 4,
+      "imageUrl": "https://www.pngall.com/wp-content/uploads/2016/03/Shoes-Free-Download-PNG.png",
+      "listPrice": 29900,
+      "price": 19900,
+      "installments": [
+        {
+          "quantity": 4,
+          "value": 4975
+        }
+      ]
+    },
+    {
+      "productId": 3,
+      "productName": "BOTA MUSTANG PRETO",
+      "category": "Woman",
+      "stars": 2,
+      "imageUrl": "https://www.pngall.com/wp-content/uploads/2016/03/Shoes-Free-Download-PNG.png",
+      "listPrice": 32900,
+      "price": 29900,
+      "installments": [
+        {
+          "quantity": 10,
+          "value": 2990
+        }
+      ]
+    },
+    {
+      "productId": 4,
+      "productName": "CINTO SEMICROMO PRETO 40MM",
+      "category": "Woman",
+      "stars": 3,
+      "imageUrl": "https://www.pngall.com/wp-content/uploads/2016/03/Shoes-Free-Download-PNG.png",
+      "listPrice": null,
+      "price": 7990,
+      "installments": [
+        {
+            "quantity": 10,
+            "value": 2990
+          }
+      ]
+    },
+    {
+        "productId": 1,
+        "productName": "SAPATO FLOATER PRETO",
+        "category": "Men",
+        "stars": 1,
+        "imageUrl": "https://www.pngall.com/wp-content/uploads/2016/03/Shoes-Free-Download-PNG.png",
+        "listPrice": null,
+        "price": 25990,
+        "installments": [
+          {
+            "quantity": 9,
+            "value": 2887
+          }
+        ]
+      },
+      {
+        "productId": 2,
+        "productName": "SANDÁLIA LINHO BROWN",
+        "category": "Men",
+        "stars": 4,
+        "imageUrl": "https://www.pngall.com/wp-content/uploads/2016/03/Shoes-Free-Download-PNG.png",
+        "listPrice": 29900,
+        "price": 19900,
+        "installments": [
+          {
+            "quantity": 4,
+            "value": 4975
+          }
+        ]
+      },
+      {
+        "productId": 3,
+        "productName": "BOTA MUSTANG PRETO",
+        "category": "Men",
+        "stars": 2,
+        "imageUrl": "https://www.pngall.com/wp-content/uploads/2016/03/Shoes-Free-Download-PNG.png",
+        "listPrice": 32900,
+        "price": 29900,
+        "installments": [
+          {
+            "quantity": 10,
+            "value": 2990
+          }
+        ]
+      },
+      {
+        "productId": 4,
+        "productName": "CINTO SEMICROMO PRETO 40MM",
+        "category": "Men",
+        "stars": 3,
+        "imageUrl": "https://www.pngall.com/wp-content/uploads/2016/03/Shoes-Free-Download-PNG.png",
+        "listPrice": null,
+        "price": 7990,
+        "installments": [
+            {
+                "quantity": 10,
+                "value": 2990
+              }
+        ]
+      }
+  ]

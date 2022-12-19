@@ -1,11 +1,12 @@
-.session{
-    list-style: none;
-    padding: 10px 0px;
-    text-align: center;
-    text-align: center;
-    border-top: 1px solid;
-    &_item{
-        padding: 8px;
-        cursor: pointer;
+@import '../../Styles/vars';
+.userBtn {
+    button{
+        width: 130px;
+        height: 33px;
+        font-size: 16px;
+        border: none;
+        color:$Primary-titles ;
+        background-color:$primary-color;
     }
+
 }

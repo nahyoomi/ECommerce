@@ -1,12 +1,12 @@
 import React from 'react'
-import './MyAccount.scss'
+import './MyAccount.scss';
+import { HiOutlineUser } from "react-icons/hi";
 
 function MyAccount() {
   return (
-    <ul className='session'>
-      <li className='session_item'>Sing In</li>
-      <li className='session_item'>Sing Out</li>
-    </ul>
+    <div className='userBtn'>
+        <button><HiOutlineUser></HiOutlineUser> My Account</button>
+    </div>
   )
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import MyAccount from '../MyAccount/MyAccount';
+import MyAccount from '../Modal/Modal';
 import './MenuDropDown.scss';
 function MenuDropDown({setShowMenu} : any) {
 

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { HiMenu} from "react-icons/hi";
 import { TiShoppingCart } from "react-icons/ti";
 import MenuDropDown from "../MenuDropDown/MenuDropDown";
+import MyAccount from "../MyAccount/MyAccount";
 import Search from "../Search/Search";
 import './Header.scss';
 
@@ -23,7 +24,10 @@ export default function Header(){
          <li className="header_toolbar--title">
             <h2>SHOPIT!</h2>
          </li>
-         <li className="searchDesktop"><Search /></li>
+         <li className="searchDesktop">
+          <Search />
+        </li>
+        <li><MyAccount/></li>
          <li className="header_toolbar--cart">
             <TiShoppingCart></TiShoppingCart>
             <div className="header_toolbar--cart-pop">

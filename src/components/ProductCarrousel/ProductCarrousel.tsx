@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import './ProductCarrousel.scss'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -7,21 +7,30 @@ import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper";
 import { HiOutlineStar } from "react-icons/hi2";
 import images from '../../assets/images';
-import {IDataOnlyProps} from '../../types';
-import {ChangeShelf} from '../../services';
+import {IDataOnlyProps} from '../../Types/types';
+import {ChangeShelf} from '../../Services/services';
+import ProductsJson from '../../Data/products.json';
+import Shelf from '../Shelf/Shelf';
+import {allWoman} from '../../Utils/helpers';
+import {IProduct} from '../../Types/types'
 
 function ProductCarrousel({setAdjustment, adjustment}:IDataOnlyProps) {
+  const [products, setProducts] = useState(ProductsJson) 
+  const [productsWoman, setProductsWoman] = useState(allWoman(products)) 
 
   const handleChange = () => {
     setAdjustment(window.innerWidth);
   }
   
   useEffect(()=> {
+    console.log(productsWoman);
+    
     window.addEventListener("resize", handleChange);
   }, [])
+  
   return (
     <div className='carrousel'>
-        <h2>Best sellers</h2>
+        <h2>Woman</h2>
         <hr/>
       <Swiper
         slidesPerView={ChangeShelf(adjustment)}
@@ -33,50 +42,11 @@ function ProductCarrousel({setAdjustment, adjustment}:IDataOnlyProps) {
         modules={[FreeMode, Pagination]}
         className="mySwiperProducts"
       >
-        <SwiperSlide className='swipercards'>
-          <ul className='cardContainer'>
-            <li className='cardContainer_image'>
-              <img src={images.shoe.src}></img>
-            </li>
-            <li className='cardContainer_item'>
-              <p>BLACK FLOAT SHOE</p>
-            </li>
-            <li className='cardContainer_icons'>
-              <HiOutlineStar> </HiOutlineStar>
-              <HiOutlineStar> </HiOutlineStar>
-              <HiOutlineStar> </HiOutlineStar>
-              <HiOutlineStar> </HiOutlineStar>
-              <HiOutlineStar> </HiOutlineStar>
-              <HiOutlineStar> </HiOutlineStar>
-            </li>
-            <li className='cardContainer_pricecross'><p> of $399.00</p></li>
-            <li className='cardContainer_price'><p>por $259.90</p></li>
-            <li className='cardContainer_btn'><button>BUY</button></li>
-          </ul>
-        </SwiperSlide>
-        <SwiperSlide className='swipercards'>
-        <ul className='cardContainer'>
-            <li className='cardContainer_image'>
-              <img src={images.sandal.src}></img>
-            </li>
-            <li className='cardContainer_item'>
-              <p>BLACK FLOAT SHOE</p>
-            </li>
-            <li className='cardContainer_icons'>
-              <HiOutlineStar> </HiOutlineStar>
-              <HiOutlineStar> </HiOutlineStar>
-              <HiOutlineStar> </HiOutlineStar>
-              <HiOutlineStar> </HiOutlineStar>
-              <HiOutlineStar> </HiOutlineStar>
-              <HiOutlineStar> </HiOutlineStar>
-            </li>
-            <li className='cardContainer_pricecross'><p> of $399.00</p></li>
-            <li className='cardContainer_price'><p>por $259.90</p></li>
-            <li className='cardContainer_btn'><button>BUY</button></li>
-          </ul>
-        </SwiperSlide>
-        <SwiperSlide className='swipercards'>Slide 3</SwiperSlide>
-        <SwiperSlide className='swipercards'>Slide 4</SwiperSlide> 
+        {productsWoman.map((woman)=>(
+          <SwiperSlide key={woman.productId}className='swipercards'>
+            <Shelf woman={woman}/>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   )
