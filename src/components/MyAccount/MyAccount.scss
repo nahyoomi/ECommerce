@@ -1,12 +1,20 @@
 @import '../../Styles/vars';
 .userBtn {
-    button{
-        width: 130px;
-        height: 33px;
-        font-size: 16px;
-        border: none;
-        color:$Primary-titles ;
-        background-color:$primary-color;
+    margin-right: 20px;
+    .myAccount {
+        display: none;
+        @media (min-width: 1025px){
+            display: flex; 
+        }
     }
-
+    @media (min-width: 1025px){
+        width: 160px;
+        span {
+         display: flex; 
+         font-size: 22px;
+        }
+        svg{
+            font-size: 30px; 
+        }
+    }
 }

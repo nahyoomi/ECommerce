@@ -6,3 +6,8 @@ export const allWoman = (products: IProduct[])=>{
  
      return WomanProducts;
 }
+
+export const allMen = (products: IProduct[])=>{
+    const MenProducts = products.filter((product)=> product.category === "Men")
+     return MenProducts;
+}
