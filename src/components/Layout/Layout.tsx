@@ -12,7 +12,7 @@ function Layout() {
 
   return (
     <div className='container'>
-      <Header />
+      <Header adjustment={adjustment}/>
       <main>
         <BannerCarrousel setAdjustment={setAdjustment} adjustment={adjustment}/>
         <ProductCarrousel setAdjustment={setAdjustment} adjustment={adjustment}/>

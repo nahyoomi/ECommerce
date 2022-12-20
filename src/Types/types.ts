@@ -2,6 +2,9 @@ export interface IDataOnlyProps  {
     adjustment: number
     setAdjustment:React.Dispatch<React.SetStateAction<number>>
 }
+export type IAdjustmentProps  = {
+    adjustment: number
+}
 
 export type IProduct = {
         "productId": number

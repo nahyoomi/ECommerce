@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { HiMenu} from "react-icons/hi";
 import { TiShoppingCart, TiUser } from "react-icons/ti";
+import DrawerCart from "../DrawerCart/DrawerCart";
 import MenuDropDown from "../MenuDropDown/MenuDropDown";
 import MyAccount from "../MyAccount/MyAccount";
 import Search from "../Search/Search";
 import './Header.scss';
+import {IAdjustmentProps} from '../../Types/types'
 
-export default function Header(){
+export default function Header({adjustment}:IAdjustmentProps){
   const [showMenu, setShowMenu]= useState<any>(false);
   const handleModal = ()=>{
     setShowMenu(true)
@@ -29,10 +31,7 @@ export default function Header(){
         </li>
          <li className="header_toolbar--cart">
             <MyAccount/>
-            <TiShoppingCart></TiShoppingCart>
-            <div className="header_toolbar--cart-pop">
-              <span>1</span>
-            </div>  
+            <DrawerCart adjustment={adjustment}/>  
          </li>
         </ul>
         <div className="searchMobile">

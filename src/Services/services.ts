@@ -3,4 +3,4 @@ export const ChangeShelf = (adjustment : number) => {
       return 2;
     }
       return 4;
-  }
+}
