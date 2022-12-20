@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { HiMenu} from "react-icons/hi";
-import { TiShoppingCart, TiUser } from "react-icons/ti";
 import DrawerCart from "../DrawerCart/DrawerCart";
 import MenuDropDown from "../MenuDropDown/MenuDropDown";
 import MyAccount from "../MyAccount/MyAccount";

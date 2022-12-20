@@ -6,13 +6,18 @@ export const allWoman = (products: IProduct[])=>{
  
      return WomanProducts;
 }
-
+export const ChangeShelf = (adjustment : number) => {
+  if(adjustment <= 850){
+    return 2;
+  }
+    return 4;
+}
 export const allMen = (products: IProduct[])=>{
     const MenProducts = products.filter((product)=> product.category === "Men")
      return MenProducts;
 }
 
-export const setDraweView = (adjustment : number) => {
+export const setDraweView = (adjustment: number) => {
     if(adjustment <= 648){
       return adjustment;
     }

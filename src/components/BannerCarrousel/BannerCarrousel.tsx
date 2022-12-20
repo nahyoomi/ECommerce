@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import './BannerCarrousel.scss'
 import images from '../../assets/images';
 import { Swiper, SwiperSlide } from "swiper/react";

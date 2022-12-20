@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import "./Shelf.scss";
 import { HiOutlineStar } from "react-icons/hi2";
 import {IitemProps} from '../../Types/types'

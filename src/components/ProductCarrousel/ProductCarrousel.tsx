@@ -6,7 +6,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper";
 import {IDataOnlyProps} from '../../Types/types';
-import {ChangeShelf} from '../../Services/services';
+import {ChangeShelf} from '../../Utils/helpers';
 import ProductsJson from '../../Data/products.json';
 import Shelf from '../Shelf/Shelf';
 import {allWoman, allMen} from '../../Utils/helpers';
