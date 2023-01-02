@@ -1,29 +1,35 @@
-@import '../../Styles/vars';
-.boxing {
-    position: absolute;
-    background-color: $secondary-color;
-    height: 100px;
-    width: 180px;
-    padding: 5px;
-    border-radius: 5px;
-    z-index: 2;
-    &_modal{
+ @import '../../Styles/vars';
+.content {
+    padding: 25px 18px;
+    &__heading{
         display: flex;
-        align-items: baseline;
-        padding-bottom: 5px;
-        &--heading{
-            padding-right: 40px;
-        .btn_CloseModal{
-            background: none;
-            border: none;
-            font-size: 16px;
-            padding: 0px 5px;  
-        }
-        }  
-    }
-    &_content{
-        span{
+        justify-content: center;
+        padding: 20px;
+        & button:first-child {
+            border-right: none !important;
+         }
+        & button:first-child, :last-child{
+            color:$placeholder-text;
+            font-size: 12px;
             font-weight: bold;
+            padding: 10px;
+            background-color: $primary-color;
+            border: 1px solid $dots;
+            &:hover{
+                background-color:$underliner;
+            }
         }
-    } 
+    }
+    &__categories{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        li{
+            border-top: 1px solid $dots;
+            padding: 5px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
 }
