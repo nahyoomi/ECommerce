@@ -1,26 +1,38 @@
 import React from 'react'
-import MyAccount from '../Modal/Modal';
 import './MenuDropDown.scss';
-function MenuDropDown({setShowMenu} : any) {
+import { HiMenu, HiX } from "react-icons/hi";
+import Drawer from 'react-modern-drawer'
+import 'react-modern-drawer/dist/index.css'
 
-  const handleClose = () => {
-    setShowMenu(false)
-  }
+function MenuDropDown() {
+  const [isOpen, setIsOpen] = React.useState(false)
+    const toggleDrawer = () => {
+        setIsOpen((prevState) => !prevState)
+    }
   return (
-    <div className='boxing'>
-      <div className='boxing_modal'>
-        <div className='boxing_modal--heading'>
-          <button 
-            className='btn_CloseModal'
-            onClick={handleClose}
-            >X</button>
+    <>
+      <div onClick={toggleDrawer}><HiMenu></HiMenu></div>
+        <Drawer
+          open={isOpen}
+          onClose={toggleDrawer}
+          direction='left'
+          className='bla bla bla'
+        >
+        <div className='content'>
+          <span onClick={toggleDrawer}><HiX></HiX></span>
+          <div className='content__heading'>
+            <button>Login</button>
+            <button>My Orders</button>
+          </div>
+          <ul className='content__categories'>
+            <li>New In</li>
+            <li>Trending</li>
+            <li>Clothing</li>
+            <li>Best Sellers</li>
+          </ul>
         </div>
-        <div className='boxing_content'>
-          <span>My Account</span>
-        </div>
-      </div>
-      <MyAccount />
-    </div>
+        </Drawer>
+    </>
   )
 }
 

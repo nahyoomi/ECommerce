@@ -5,10 +5,8 @@ import { TiUser } from "react-icons/ti";
 function MyAccount() {
   return (
     <div className='userBtn'>
-        <span className='userBtn_box'>
-          <TiUser></TiUser>
-          <span className='myAccount'>My Account</span>
-        </span>
+      <button>Sing Up</button>
+      <button>Sign In</button>
     </div>
   )
 }
