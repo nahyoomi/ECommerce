@@ -1,8 +1,11 @@
 import React from 'react'
+import Layout from '../../components/Layout/Layout'
 
 function Recommended() {
   return (
-    <div>Recommended</div>
+    <Layout>
+      <>recommended</>
+    </Layout>
   )
 }
 

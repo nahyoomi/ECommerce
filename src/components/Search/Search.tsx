@@ -6,7 +6,7 @@ export default function Search(){
             <input
                 placeholder='What are you looking for?'
             />
-            <div className="search_icon">
+            <div className="search__icon">
                 <HiSearch></HiSearch>
             </div>
         </div>

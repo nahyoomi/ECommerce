@@ -5,7 +5,7 @@ function SubscriptionForm() {
   return (
     <div  className='fullform'>
         <h2> Join our news and promotions!</h2>
-        <form className='fullform_form'>
+        <form className='fullform__form'>
             <input
                 placeholder='Enter your name'
             />

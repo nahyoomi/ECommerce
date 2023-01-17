@@ -1,10 +1,13 @@
+import {DataContextProvider} from './Contexts/DataContext';
 import RoutesMain from "./Routes/RoutesMain"
 
 function App() {
 
   return (
     <div className="App">
-      <RoutesMain/>
+      <DataContextProvider>
+        <RoutesMain/>
+      </DataContextProvider>
     </div>
   )
 }

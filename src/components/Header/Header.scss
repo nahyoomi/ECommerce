@@ -2,15 +2,15 @@
 .header{
    flex-grow: 1; 
    background-color: $primary-color;
-   &_bar{
+   &__bar{
     position: static;
-    .searchMobile {
+    .searchmobile {
         @media (min-width:$desktop){
             display: none;
         }
     }
    }
-   &_toolbar{
+   &__toolbar{
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,7 @@
         }
     }
 
-    .searchDesktop {
+    .searchdesktop {
         display: none;
         @media (min-width: $desktop){
             display:flex;

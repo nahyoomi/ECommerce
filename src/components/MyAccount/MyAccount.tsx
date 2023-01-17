@@ -1,6 +1,5 @@
 import React from 'react'
 import './MyAccount.scss';
-import { TiUser } from "react-icons/ti";
 
 function MyAccount() {
   return (
