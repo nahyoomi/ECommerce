@@ -1,10 +1,10 @@
-import Layout from './components/Layout/Layout'
+import RoutesMain from "./Routes/RoutesMain"
 
 function App() {
 
   return (
     <div className="App">
-      <Layout />
+      <RoutesMain/>
     </div>
   )
 }

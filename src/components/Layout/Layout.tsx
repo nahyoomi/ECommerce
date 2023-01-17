@@ -6,20 +6,18 @@ import ProductCarrousel from '../ProductCarrousel/ProductCarrousel';
 import SubscriptionForm from '../SubscriptionForm/SubscriptionForm';
 import './Layout.scss'
 
+interface Props {
+  children: JSX.Element;
+}
 
-function Layout() {
+function Layout( { children }: Props ) {
   const [adjustment, setAdjustment ] = useState(window.innerWidth);
 
   return (
     <div className='container'>
       <Header adjustment={adjustment}/>
-      <main>
-        <BannerCarrousel setAdjustment={setAdjustment} adjustment={adjustment}/>
-        <ProductCarrousel setAdjustment={setAdjustment} adjustment={adjustment}/>
-        <SubscriptionForm />
-      </main>
+      <main>{children}</main>
       <Footer />
-
     </div>
   )
 }
