@@ -5,6 +5,10 @@
     padding: 0;
     margin: 0;
     position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &__disscount{
         display: flex;
         align-items: flex-end;

@@ -5,7 +5,7 @@ import ProductCarrousel from '../../components/ProductCarrousel/ProductCarrousel
 import SubscriptionForm from '../../components/SubscriptionForm/SubscriptionForm';
 import { allWoman, allMen } from '../../Utils/helpers';
 import {GlobalContext} from '../../Contexts/DataContext';
-
+import './Home.scss'
 function Home() {
   const { products } : any = useContext(GlobalContext);
   const [productsFeatured, setProductsFeatured] = useState(allWoman(products)) 
@@ -15,11 +15,11 @@ function Home() {
     <Layout>
       <>
         <BannerCarrousel />
-        <h2>Featured</h2>
-        <hr/>
+        <h2 className='tittle'>Featured</h2>
+        <hr className='line'/>
         <ProductCarrousel category={productsFeatured} />
-        <h2>Recommended</h2>
-        <hr/>
+        <h2 className='tittle'>Recommended</h2>
+        <hr className='line'/>
         <ProductCarrousel category={productsRecommended} />
         <SubscriptionForm />
       </>

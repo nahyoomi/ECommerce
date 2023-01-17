@@ -5,7 +5,7 @@ import Search from "../Search/Search";
 import './Header.scss';
 import MyAccount from "../MyAccount/MyAccount";
 import Navbar from "../Navbar/Navbar";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Header(){
   const [showMenu, setShowMenu]= useState<any>(false);
@@ -20,9 +20,9 @@ export default function Header(){
           <MenuDropDown />
          </li>
          <li className="header__toolbar--title">
-            <Link to={'/'}>
+            <NavLink to={'/'} className='navigatelink'>
               <h2>SHOPIT!</h2>
-            </Link>
+            </NavLink>
          </li>
          <li className="searchdesktop">
           <Search />

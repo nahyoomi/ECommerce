@@ -45,7 +45,11 @@
     }
     &--title{
         padding: 0 12px;
+        .navigatelink {
+            text-decoration: none;
+        }
         h2{
+            color: $Primary-titles;
             font-weight: 900;
             margin: 12px;
             font-size: 30px;

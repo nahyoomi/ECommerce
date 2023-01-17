@@ -1,0 +1,7 @@
+@import '../../Styles/vars';
+.grid{
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 20px;
+    flex-wrap: wrap;
+}

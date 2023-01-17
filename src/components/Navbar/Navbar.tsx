@@ -1,28 +1,28 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navbar.scss';
 function Navbar() {
   return (
     <ul className='nav'>
         <li className='nav__item'>
-          <Link to={'/'}>
+          <NavLink to={'/'} className='navigatelink'>
             Home
-          </Link>
+          </NavLink>
         </li>
         <li className='nav__item'>
-          <Link to={'/shop'}>
+          <NavLink to={'/shop'} className='navigatelink'>
             Shop
-          </Link>
+          </NavLink>
         </li>
         <li className='nav__item'>
-          <Link to={'/featured'}>
+          <NavLink to={'/featured'} className='navigatelink'>
             Featured
-          </Link>
+          </NavLink>
         </li>
         <li className='nav__item'>
-          <Link to={'/recommended'}>
+          <NavLink to={'/recommended'} className='navigatelink'>
             Recommended
-          </Link>
+          </NavLink>
         </li>
     </ul>
   )
