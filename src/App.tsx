@@ -1,10 +1,13 @@
-import Layout from './components/Layout/Layout'
+import {DataContextProvider} from './Contexts/DataContext';
+import RoutesMain from "./Routes/RoutesMain"
 
 function App() {
 
   return (
     <div className="App">
-      <Layout />
+      <DataContextProvider>
+        <RoutesMain/>
+      </DataContextProvider>
     </div>
   )
 }

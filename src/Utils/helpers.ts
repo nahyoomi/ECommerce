@@ -2,7 +2,7 @@ import {IProduct} from '../Types/types';
 
 export const allWoman = (products: IProduct[])=>{
 
-    const WomanProducts = products.filter((product)=> product.category === "Woman")
+    const WomanProducts = products.filter((product)=> product.category === "recommended")
  
      return WomanProducts;
 }
@@ -13,7 +13,7 @@ export const ChangeShelf = (adjustment : number) => {
     return 4;
 }
 export const allMen = (products: IProduct[])=>{
-    const MenProducts = products.filter((product)=> product.category === "Men")
+    const MenProducts = products.filter((product)=> product.category === "featured")
      return MenProducts;
 }
 

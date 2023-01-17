@@ -1,9 +1,5 @@
-export interface IDataOnlyProps  {
-    adjustment: number
-    setAdjustment:React.Dispatch<React.SetStateAction<number>>
-}
-export type IAdjustmentProps  = {
-    adjustment: number
+export interface IDataFilterProps  {
+    category: IProduct[]
 }
 
 export type IProduct = {
@@ -22,3 +18,7 @@ export type IProduct = {
 export type IitemProps  = {
     item: IProduct
 }
+
+ export interface IPropsChildren {
+    children: JSX.Element;
+  }

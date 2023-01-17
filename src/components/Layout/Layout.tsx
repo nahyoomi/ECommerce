@@ -1,25 +1,18 @@
-import React, {useState} from 'react'
-import BannerCarrousel from '../BannerCarrousel/BannerCarrousel';
+import {useContext} from 'react'
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
-import ProductCarrousel from '../ProductCarrousel/ProductCarrousel';
-import SubscriptionForm from '../SubscriptionForm/SubscriptionForm';
 import './Layout.scss'
+import { IPropsChildren } from '../../Types/types';
+import { GlobalContext } from '../../Contexts/DataContext';
 
-
-function Layout() {
-  const [adjustment, setAdjustment ] = useState(window.innerWidth);
+function Layout( { children }: IPropsChildren  ) {
+  const { adjustment }: any = useContext(GlobalContext);
 
   return (
     <div className='container'>
       <Header adjustment={adjustment}/>
-      <main>
-        <BannerCarrousel setAdjustment={setAdjustment} adjustment={adjustment}/>
-        <ProductCarrousel setAdjustment={setAdjustment} adjustment={adjustment}/>
-        <SubscriptionForm />
-      </main>
+      <main>{children}</main>
       <Footer />
-
     </div>
   )
 }

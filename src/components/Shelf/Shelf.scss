@@ -1,8 +1,15 @@
 @import '../../Styles/vars';
 
-.cardContainer{
+.cardcontainer{
+    list-style: none;
+    padding: 0;
+    margin: 0;
     position: relative;
-    &_disscount{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__disscount{
         display: flex;
         align-items: flex-end;
         position: absolute;
@@ -17,4 +24,48 @@
         border-bottom: 40px solid transparent;
         border-left: 40px solid transparent;
     }
+    &__image{
+        img{
+          object-fit: cover;
+        }
+      }
+    &__item{
+        p{
+          font-size: 10px;
+          color: $details-text;
+        }
+    }
+    &_icons {
+        svg {
+          color: $details;
+        }
+      } 
+    &__pricecross {
+        p{
+          font-size: 11px;
+          text-decoration: line-through;
+          color: $details-text;
+          margin: 0;
+        }
+    }
+    &__price{
+        p{
+          font-size: 16px;
+          font-weight: bold;
+          color: $Primary-titles;
+          margin: 5px;
+        }
+    }
+    &__btn{
+        button {
+          color: $primary-color;
+          font-size: 15px;
+          background-color: $Primary-titles;
+          border-radius: 10px;
+          width: 170px;
+          height: 40px;
+          padding: 10px;
+          margin-top: 10px;
+        }
+    } 
 }

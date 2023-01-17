@@ -3,7 +3,7 @@
     {
       "productId": 1,
       "productName": "SAPATO FLOATER PRETO",
-      "category": "Woman",
+      "category": "recommended",
       "stars": 1,
       "imageUrl": "https://live.staticflickr.com/65535/52603215966_87d9cc904b_m.jpg",
       "listPrice": null,
@@ -18,7 +18,7 @@
     {
       "productId": 2,
       "productName": "SANDÁLIA LINHO BROWN",
-      "category": "Woman",
+      "category": "recommended",
       "stars": 4,
       "imageUrl": "https://live.staticflickr.com/65535/52602724257_b560974e6c_m.jpg",
       "listPrice": 29900,
@@ -33,7 +33,7 @@
     {
       "productId": 3,
       "productName": "BOTA MUSTANG PRETO",
-      "category": "Woman",
+      "category": "featured",
       "stars": 2,
       "imageUrl": "https://live.staticflickr.com/65535/52603215966_87d9cc904b_m.jpg",
       "listPrice": 32900,
@@ -48,7 +48,7 @@
     {
       "productId": 4,
       "productName": "CINTO SEMICROMO PRETO 40MM",
-      "category": "Woman",
+      "category": "recommended",
       "stars": 3,
       "imageUrl": "https://live.staticflickr.com/65535/52603472154_91b156f332_m.jpg",
       "listPrice": null,
@@ -63,7 +63,7 @@
     {
         "productId": 1,
         "productName": "SAPATO FLOATER PRETO",
-        "category": "Men",
+        "category": "featured",
         "stars": 1,
         "imageUrl": "https://live.staticflickr.com/65535/52603215966_87d9cc904b_m.jpg",
         "listPrice": null,
@@ -78,7 +78,7 @@
       {
         "productId": 2,
         "productName": "SANDÁLIA LINHO BROWN",
-        "category": "Men",
+        "category": "recommended",
         "stars": 4,
         "imageUrl": "https://live.staticflickr.com/65535/52602724257_b560974e6c_m.jpg",
         "listPrice": 29900,
@@ -93,7 +93,7 @@
       {
         "productId": 3,
         "productName": "BOTA MUSTANG PRETO",
-        "category": "Men",
+        "category": "featured",
         "stars": 2,
         "imageUrl": "https://live.staticflickr.com/65535/52603215966_87d9cc904b_m.jpg",
         "listPrice": 32900,
@@ -108,7 +108,7 @@
       {
         "productId": 4,
         "productName": "CINTO SEMICROMO PRETO 40MM",
-        "category": "Men",
+        "category": "featured",
         "stars": 3,
         "imageUrl": "https://live.staticflickr.com/65535/52603472154_91b156f332_m.jpg",
         "listPrice": null,

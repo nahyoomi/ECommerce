@@ -1,14 +1,14 @@
-import React, {useEffect} from 'react'
+import {useEffect, useContext} from 'react'
 import './BannerCarrousel.scss'
 import images from '../../assets/images';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
-import {IDataOnlyProps} from '../../Types/types';
+import { GlobalContext } from '../../Contexts/DataContext';
 
-function BannerCarrousel({setAdjustment, adjustment}:IDataOnlyProps) {
-
+function BannerCarrousel() {
+  const { adjustment, setAdjustment}: any = useContext(GlobalContext);
   const handleChange = () => {
     setAdjustment(window.innerWidth);
   }
@@ -18,34 +18,34 @@ function BannerCarrousel({setAdjustment, adjustment}:IDataOnlyProps) {
   }, [])
 
   return (
-    <div className='mainBanner'>
+    <div className='banner'>
       <Swiper
         spaceBetween={30}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiperBanner"
+        className="myswiperbanner"
       >
-        <SwiperSlide className='bannerImg'>
+        <SwiperSlide className='banner__img'>
           {adjustment <= 1024 
             ?  <img src={images.clothingBanner.src}></img>
             :  <img src={images.DesktopBanner1.src}></img>
           }    
         </SwiperSlide>
-        <SwiperSlide className='bannerImg'>
+        <SwiperSlide className='banner__img'>
         {adjustment <= 1024 
             ?  <img src={images.coupleBanner.src}></img>
             :  <img src={images.DesktopBanner1.src}></img>
         } 
         </SwiperSlide>
-        <SwiperSlide className='bannerImg'>
+        <SwiperSlide className='banner__img'>
         {adjustment <= 1024 
             ?  <img src={images.streetBanner.src}></img>
             :  <img src={images.DesktopBanner2.src}></img>
         }   
         </SwiperSlide>
-        <SwiperSlide className='bannerImg'>
+        <SwiperSlide className='banner__img'>
         {adjustment <= 1024 
             ?  <img src={images.classygirlBanner.src}></img>
             :  <img src={images.DesktopBanner3.src}></img>

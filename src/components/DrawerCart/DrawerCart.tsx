@@ -1,12 +1,13 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './DrawerCart.scss'
 import Drawer from 'react-modern-drawer'
 import 'react-modern-drawer/dist/index.css'
 import { TiShoppingCart } from "react-icons/ti";
-import {IAdjustmentProps} from '../../Types/types'
 import {setDraweView} from '../../Utils/helpers';
+import { GlobalContext } from '../../Contexts/DataContext';
 
-function DrawerCart({adjustment}:IAdjustmentProps) {
+function DrawerCart() {
+    const { adjustment}: any = useContext(GlobalContext);
     const [isOpen, setIsOpen] = React.useState(false)
     const toggleDrawer = () => {
         setIsOpen((prevState) => !prevState)

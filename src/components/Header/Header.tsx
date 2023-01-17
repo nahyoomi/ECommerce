@@ -3,34 +3,36 @@ import DrawerCart from "../DrawerCart/DrawerCart";
 import MenuDropDown from "../MenuDropDown/MenuDropDown";
 import Search from "../Search/Search";
 import './Header.scss';
-import {IAdjustmentProps} from '../../Types/types'
 import MyAccount from "../MyAccount/MyAccount";
 import Navbar from "../Navbar/Navbar";
+import { NavLink } from "react-router-dom";
 
-export default function Header({adjustment}:IAdjustmentProps){
+export default function Header(){
   const [showMenu, setShowMenu]= useState<any>(false);
   const handleModal = ()=>{
     setShowMenu(true)
   }
   return(
     <header className="header">
-      <div className='header_bar'>
-        <ul className='header_toolbar'>
-         <li className="header_toolbar--menu">
+      <div className='header__bar'>
+        <ul className='header__toolbar'>
+         <li className="header__toolbar--menu">
           <MenuDropDown />
          </li>
-         <li className="header_toolbar--title">
-            <h2>SHOPIT!</h2>
+         <li className="header__toolbar--title">
+            <NavLink to={'/'} className='navigatelink'>
+              <h2>SHOPIT!</h2>
+            </NavLink>
          </li>
-         <li className="searchDesktop">
+         <li className="searchdesktop">
           <Search />
         </li>
-         <li className="header_toolbar--cart">
+         <li className="header__toolbar--cart">
           <MyAccount/>
-            <DrawerCart adjustment={adjustment}/>  
+            <DrawerCart />  
          </li>
         </ul>
-        <div className="searchMobile">
+        <div className="searchmobile">
           <Search />
         </div>
         <Navbar/>

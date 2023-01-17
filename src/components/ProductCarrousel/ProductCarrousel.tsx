@@ -1,21 +1,18 @@
-import React, {useEffect, useState} from 'react'
+import {useEffect, useContext} from 'react'
 import './ProductCarrousel.scss'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper";
-import {IDataOnlyProps} from '../../Types/types';
+import {IDataFilterProps} from '../../Types/types';
 import {ChangeShelf} from '../../Utils/helpers';
-import ProductsJson from '../../Data/products.json';
 import Shelf from '../Shelf/Shelf';
-import {allWoman, allMen} from '../../Utils/helpers';
+import { GlobalContext } from '../../Contexts/DataContext';
 
-function ProductCarrousel({setAdjustment, adjustment}:IDataOnlyProps) {
-  const [products, setProducts] = useState(ProductsJson) 
-  const [productsWoman, setProductsWoman] = useState(allWoman(products)) 
-  const [productsMen, setProductsMen] = useState(allMen(products)) 
-
+function ProductCarrousel({category}:IDataFilterProps) {
+  const { adjustment, setAdjustment}: any = useContext(GlobalContext);
+  
   const handleChange = () => {
     setAdjustment(window.innerWidth);
   }
@@ -26,9 +23,7 @@ function ProductCarrousel({setAdjustment, adjustment}:IDataOnlyProps) {
   
   return (
     <div className='carrousel'>
-      <div className='carrousel_women'>
-      <h2>Women</h2>
-        <hr/>
+      <div className='carrousel__category'>
       <Swiper
         slidesPerView={ChangeShelf(adjustment)}
         spaceBetween={30}
@@ -37,29 +32,9 @@ function ProductCarrousel({setAdjustment, adjustment}:IDataOnlyProps) {
           clickable: true,
         }}
         modules={[FreeMode, Pagination]}
-        className="mySwiperProducts"
+        className="myswiperproducts"
       >
-        {productsWoman.map((item)=>(
-          <SwiperSlide key={item.productId}className='swipercards'>
-            <Shelf item={item}/>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      </div>
-      <div className='carrousel_men'>
-      <h2>Men</h2>
-        <hr/>
-      <Swiper
-        slidesPerView={ChangeShelf(adjustment)}
-        spaceBetween={30}
-        freeMode={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[FreeMode, Pagination]}
-        className="mySwiperProducts"
-      >
-        {productsMen.map((item)=>(
+        {category.map((item)=>(
           <SwiperSlide key={item.productId}className='swipercards'>
             <Shelf item={item}/>
           </SwiperSlide>
