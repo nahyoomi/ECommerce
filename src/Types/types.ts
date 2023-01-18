@@ -1,6 +1,9 @@
 export interface IDataFilterProps  {
     category: IProduct[]
 }
+export interface IDataArrayProducts {
+    products: IProduct[]
+  }
 
 export type IProduct = {
         "productId": number

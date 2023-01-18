@@ -61,7 +61,7 @@
       ]
     },
     {
-        "productId": 1,
+        "productId": 5,
         "productName": "SAPATO FLOATER PRETO",
         "category": "featured",
         "stars": 1,
@@ -76,7 +76,7 @@
         ]
       },
       {
-        "productId": 2,
+        "productId": 6,
         "productName": "SANDÁLIA LINHO BROWN",
         "category": "recommended",
         "stars": 4,
@@ -91,7 +91,7 @@
         ]
       },
       {
-        "productId": 3,
+        "productId": 7,
         "productName": "BOTA MUSTANG PRETO",
         "category": "featured",
         "stars": 2,
@@ -106,7 +106,7 @@
         ]
       },
       {
-        "productId": 4,
+        "productId": 8,
         "productName": "CINTO SEMICROMO PRETO 40MM",
         "category": "featured",
         "stars": 3,
