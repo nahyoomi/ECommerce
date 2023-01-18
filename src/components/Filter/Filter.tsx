@@ -4,19 +4,9 @@ import { GlobalContext } from '../../Contexts/DataContext';
 import CategoryJson from '../../Data/categories.json'
 
 function Filter() {
-  const { productsFilter, setProductsFilter, products, adjustment, setAdjustment }:any = useContext(GlobalContext);
+  const { productsFilter, setProductsFilter, products, adjustment }:any = useContext(GlobalContext);
   const [isOpen, setIsOpen] = React.useState(adjustment<1024?'notOpen':'isOpen')
   
-/*   const handleChange = () => {
-    setAdjustment(window.innerWidth);
-  }
- */
-/*   useEffect(() => {
-    window.addEventListener("resize", handleChange);
-    console.log(adjustment);
-    
-   
-  }, []) */
   
   const handleClick = (()=> {
     if(adjustment<1024){
