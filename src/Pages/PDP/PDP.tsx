@@ -32,7 +32,7 @@ function PDP() {
             </section>
         <div className='pdpsection__fullproduct'>
             <section className='section__image'>
-                <img src={item.imageUrl}/>
+                <img  className='mainimage'src={item.imageUrl}/>
                 <div className='section__image--pics'>
                     <div className='image__one'>
                         <img src={item.imageUrl}/>
@@ -58,14 +58,14 @@ function PDP() {
                 </div>
                 <div className='section__details--sdk'>
                     <p>Choose color</p>
-                    <input type='radio'/>
-                    <input type='radio'/>
-                    <input type='radio'/>
-                    <input type='radio'/>
-                    <input type='radio'/>
-                    <input type='radio'/>
+                    <input type='button'className='color__one'/>
+                    <input type='button'className='color__two'/>
+                    <input type='button'className='color__three'/>
+                    <input type='button'className='color__four'/>
+                    <input type='button'className='color__five'/>
+                    <input type='button'className='color__six'/>
                 </div>
-                <span className='section__details--price'> $105.67 </span>
+                <p className='section__details--price'> $105.67 </p>
                 <input className='section__details--btn'
                     type='button'
                     value='Add To Cart'

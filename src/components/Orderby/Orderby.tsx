@@ -19,7 +19,7 @@ function Orderby() {
         Order by:
       </label>
         <select className='orderby__selector'value={value} onChange={handleChange}>
-          <option >--Select--</option>
+          <option>--Select--</option>
           <option value='A-Z'>A-Z</option>
           <option value='BestRated'>Most Rated</option>
           <option value='LowerPrice'>Lower Price</option>

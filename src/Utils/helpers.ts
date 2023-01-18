@@ -41,5 +41,7 @@ export const orderByProduct = (productsFilter : IProduct[], e:any)=>{
   }else if(e.target.value === 'BestRated'){
     const sortedList = [...productsFilter].sort((a, b) => (a.stars < b.stars ? 1 : a.stars > b.stars ? -1 : 0))
     return sortedList
+  }else{
+    return productsFilter;
   }
 }
