@@ -25,10 +25,10 @@ function MenuDropDown() {
             <button>My Orders</button>
           </div>
           <ul className='content__categories'>
-            <li>New In</li>
-            <li>Trending</li>
-            <li>Clothing</li>
-            <li>Best Sellers</li>
+            <li>Home</li>
+            <li>Shop</li>
+            <li>Featured</li>
+            <li>Recommended</li>
           </ul>
         </div>
         </Drawer>

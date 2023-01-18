@@ -1,11 +1,33 @@
-import React, { useState,useContext } from 'react'
+import React, { useEffect,useContext } from 'react'
 import './Filter.scss'
 import { GlobalContext } from '../../Contexts/DataContext';
 import CategoryJson from '../../Data/categories.json'
 
 function Filter() {
+  const { productsFilter, setProductsFilter, products, adjustment, setAdjustment }:any = useContext(GlobalContext);
+  const [isOpen, setIsOpen] = React.useState(adjustment<1024?'notOpen':'isOpen')
   
-  const { productsFilter, setProductsFilter, products }:any = useContext(GlobalContext);
+/*   const handleChange = () => {
+    setAdjustment(window.innerWidth);
+  }
+ */
+/*   useEffect(() => {
+    window.addEventListener("resize", handleChange);
+    console.log(adjustment);
+    
+   
+  }, []) */
+  
+  const handleClick = (()=> {
+    if(adjustment<1024){
+      setIsOpen(isOpen === 'isOpen'? 'notOpen': 'isOpen')
+    }else{
+      setIsOpen('isOpen')
+    } 
+    console.log(isOpen);
+    
+  }) 
+
 
 const handleOnChange = ({subCategory,category}:any) => {
   subCategory.checked = !subCategory.checked;
@@ -25,27 +47,28 @@ const handleOnChange = ({subCategory,category}:any) => {
 };
 
   return (
-    <ul className='filter'>
-      <h2>FILTERS</h2>
-      {
-      CategoryJson.map((category) => {
+    <div>
+    <h2 className='filter__tittle' onClick={handleClick}>FILTERS</h2>
+    
+    <ul className={`filter ${isOpen}`} >
+      
+      {CategoryJson.map((category) => {
         return (
-          <li key={category.categoryId}>
-            <p>{category.categoryName}</p>
-            {
-              category.subCategory.map((subCategory) => {
+          <li className='categories' key={category.categoryId}>
+            <p className='categories__name'>{category.categoryName}</p>
+            {category.subCategory.map((subCategory) => {
                 return (
-                  <ul key={subCategory.subCategoryId}>
-                    <li>
-                    <input
-                    type="checkbox"
-                    checked={subCategory.checked}
-                    id={`custom-checkbox-${subCategory.subCategoryId}`}
-                    name={subCategory.subCategoryName}
-                    value="true"
-                    onChange={() => handleOnChange({subCategory,category})}
-                  />
-                  <label htmlFor={`custom-checkbox-${subCategory.subCategoryId}`}>{subCategory.subCategoryName}</label>
+                  <ul className='options' key={subCategory.subCategoryId}>
+                    <li className='options__box'>
+                      <input
+                        type="checkbox"
+                        checked={subCategory.checked}
+                        id={`custom-checkbox-${subCategory.subCategoryId}`}
+                        name={subCategory.subCategoryName}
+                        value="true"
+                        onChange={() => handleOnChange({subCategory,category})}
+                      />
+                      <label htmlFor={`custom-checkbox-${subCategory.subCategoryId}`}>{subCategory.subCategoryName}</label>
                     </li>
                   </ul>
                 )
@@ -56,6 +79,7 @@ const handleOnChange = ({subCategory,category}:any) => {
       })
       }
     </ul>
+    </div>
   )
 }
 
