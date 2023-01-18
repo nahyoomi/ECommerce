@@ -5,6 +5,7 @@ import 'react-modern-drawer/dist/index.css'
 import { TiShoppingCart } from "react-icons/ti";
 import {setDraweView} from '../../Utils/helpers';
 import { GlobalContext } from '../../Contexts/DataContext';
+import Basket from '../Basket/Basket';
 
 function DrawerCart() {
     const { adjustment}: any = useContext(GlobalContext);
@@ -39,6 +40,7 @@ function DrawerCart() {
                         <button>Clear Cart</button>
                     </li>
                 </ul>
+                <Basket/>
                 <div className='cart__container--footer'>
                     <div className='cart__container--footer-div'>
                         <p>Subtotal Amount:</p>
