@@ -8,6 +8,7 @@ import Recommended from '../Pages/Recommended/Recommended';
 import Checkout from '../Pages/Checkout/Checkout';
 import NotFound from '../Pages/NotFound/NotFound';
 import PDP from '../Pages/PDP/PDP';
+import SearchPage from '../Pages/SearchPage/SearchPage';
 
 
 function RoutesMain() {
@@ -22,6 +23,7 @@ function RoutesMain() {
             <Route path='/checkout' element={<Checkout/>}/>
             <Route path='/notfound' element={<NotFound/>}/>
             <Route path='/product/:id' element={<PDP/>}/>
+            <Route path='/search/:word' element={<SearchPage/>}/>
         </Routes>
     </BrowserRouter>
   )

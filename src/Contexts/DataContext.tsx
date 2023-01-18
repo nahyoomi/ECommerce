@@ -11,8 +11,12 @@ export function DataContextProvider( { children }: IPropsChildren){
     const [productsFeatured, setProductsFeatured] = useState(featured(products)) 
     const [productsRecommended, setProductsRecommended] = useState(recommended(products));
     const [productsFilter, setProductsFilter] = useState(products);
+    const [productSerch, setProductSerch] = useState(products)
 
-    const value = {adjustment, setAdjustment, products, setProducts, productsFeatured, setProductsFeatured, productsRecommended, setProductsRecommended, productsFilter, setProductsFilter};
+    const value = {adjustment, setAdjustment, products, setProducts, productsFeatured, 
+        setProductsFeatured, productsRecommended, setProductsRecommended, productsFilter, 
+        setProductsFilter,productSerch, setProductSerch
+    };
     
 
     return (

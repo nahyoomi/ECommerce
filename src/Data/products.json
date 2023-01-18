@@ -23,7 +23,7 @@
   },
   {
     "productId": 2,
-    "productName": "SANDÁLIA LINHO BROWN",
+    "productName": "SANDALIA LINHO BROWN",
     "category": "recommended",
     "color": [ "blue", "green"],
     "gender":{
@@ -107,7 +107,7 @@
     },
     {
       "productId": 6,
-      "productName": "SANDÁLIA LINHO BROWN",
+      "productName": "SANDALIA LINHO BROWN",
       "category": "recommended",
       "color": ["black", "brown", "red", "blue", "green"],
       "gender":{
@@ -191,7 +191,7 @@
     },
     {
       "productId": 10,
-      "productName": "SANDÁLIA LINHO BROWN",
+      "productName": "SANDALIA LINHO BROWN",
       "category": "recommended",
       "color": [ "blue", "green"],
       "gender":{
@@ -275,7 +275,7 @@
       },
       {
         "productId": 14,
-        "productName": "SANDÁLIA LINHO BROWN",
+        "productName": "SANDALIA LINHO BROWN",
         "category": "recommended",
         "color": ["black", "brown", "red", "blue", "green"],
         "gender":{
