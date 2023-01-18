@@ -7,7 +7,7 @@ import {GlobalContext} from '../../Contexts/DataContext'
 import './Shop.scss'
 
 function Shop() {
-  const {products}: any = useContext(GlobalContext)
+  const {productsFilter}: any = useContext(GlobalContext)
   return (
     <Layout>
       <section className='section'>
@@ -17,7 +17,7 @@ function Shop() {
         <div className='section__container'>
             <Filter/>
             <Orderby/>
-            <PLPGrid products ={products}/>
+            <PLPGrid products ={productsFilter}/>
         </div>
       </section>
     </Layout>
