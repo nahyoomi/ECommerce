@@ -47,7 +47,7 @@ const handleOnChange = ({subCategory,category}:any) => {
 };
 
   return (
-    <div>
+    <div className='containertofilter'>
     <h2 className='filter__tittle' onClick={handleClick}>FILTERS</h2>
     
     <ul className={`filter ${isOpen}`} >
