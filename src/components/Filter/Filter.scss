@@ -1,0 +1,53 @@
+@import '../../Styles/vars';
+
+.notOpen{
+    display: none !important;
+    @media(min-width: $desktop){
+        display: block !important;
+    } 
+}
+.isOpen{
+    display: block !important;
+}
+.filter{
+    list-style: none;
+    padding: 2px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__tittle{
+        font-size: 20px;
+        cursor: pointer;
+    }
+    @media(min-width: $desktop){
+        display: block;
+    }
+    .container{
+        display: flex;
+    }
+    .categories{
+        display: flex;
+        align-items: baseline;
+        text-transform: capitalize;
+        padding: 6px;
+        @media(min-width: $desktop){
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__name{
+            font-weight: bold;
+        }
+         .options{
+            list-style: none;
+            &__box{
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+            }
+            @media(min-width: $desktop){
+                padding: 0;
+            }
+        }
+    }
+}
