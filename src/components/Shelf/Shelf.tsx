@@ -1,11 +1,17 @@
 import "./Shelf.scss";
+import { useNavigate } from "react-router-dom";
 import { HiOutlineStar } from "react-icons/hi2";
 import {IitemProps} from '../../Types/types'
 
+ 
 function Shelf({item}: IitemProps) {
-  
+  let navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/product/${item.productId}`);
+    
+  }
   return (
-    <ul className='cardcontainer'>
+    <ul className='cardcontainer' onClick={handleClick}>
       {item.listPrice != null
         && 
         <li className='cardcontainer__disscount'>

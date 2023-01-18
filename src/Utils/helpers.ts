@@ -1,10 +1,10 @@
 import {IProduct} from '../Types/types';
 
-export const allWoman = (products: IProduct[])=>{
+export const featured = (products: IProduct[])=>{
 
-    const WomanProducts = products.filter((product)=> product.category === "recommended")
+    const FeauturedProducts = products.filter((product)=> product.category === "featured")
  
-     return WomanProducts;
+     return FeauturedProducts;
 }
 export const ChangeShelf = (adjustment : number) => {
   if(adjustment <= 850){
@@ -12,9 +12,9 @@ export const ChangeShelf = (adjustment : number) => {
   }
     return 4;
 }
-export const allMen = (products: IProduct[])=>{
-    const MenProducts = products.filter((product)=> product.category === "featured")
-     return MenProducts;
+export const recommended = (products: IProduct[])=>{
+    const recommended = products.filter((product)=> product.category === "recommended")
+     return recommended;
 }
 
 export const setDraweView = (adjustment: number) => {
@@ -22,4 +22,9 @@ export const setDraweView = (adjustment: number) => {
       return adjustment;
     }
       return 500;
+}
+export const getProduct = (products : IProduct[], id : string | undefined  | number )=>{
+  const filteredProduct = products.find((product: IProduct)=>product.productId+"" === id)
+  return filteredProduct;
+  
 }

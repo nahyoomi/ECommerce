@@ -1,9 +1,99 @@
 
 [
-    {
-      "productId": 1,
+  {
+    "productId": 1,
+    "productName": "SAPATO FLOATER PRETO",
+    "category": "recommended",
+    "color": ["black", "brown", "red"],
+    "gender":{
+      "categoryName": "woman",
+      "subCategory":"sandals"
+    },
+    "size": [ "37", "38", "39", "40", "41"],
+    "stars": 1,
+    "imageUrl": "https://live.staticflickr.com/65535/52603215966_87d9cc904b_m.jpg",
+    "listPrice": null,
+    "price": 25990,
+    "installments": [
+      {
+        "quantity": 9,
+        "value": 2887
+      }
+    ]
+  },
+  {
+    "productId": 2,
+    "productName": "SANDÁLIA LINHO BROWN",
+    "category": "recommended",
+    "color": [ "blue", "green"],
+    "gender":{
+      "categoryName": "woman",
+      "subCategory":"sandals"
+    },
+    "size": ["34", "35", "36", "37", "38", "39"],
+    "stars": 4,
+    "imageUrl": "https://live.staticflickr.com/65535/52602724257_b560974e6c_m.jpg",
+    "listPrice": 29900,
+    "price": 19900,
+    "installments": [
+      {
+        "quantity": 4,
+        "value": 4975
+      }
+    ]
+  },
+  {
+    "productId": 3,
+    "productName": "BOTA MUSTANG PRETO",
+    "category": "featured",
+    "color": ["blue", "green"],
+    "gender":{
+      "categoryName": "woman",
+      "subCategory":"top"
+    },
+    "size": [ "37", "38", "39", "40"],
+    "stars": 2,
+    "imageUrl": "https://live.staticflickr.com/65535/52603215966_87d9cc904b_m.jpg",
+    "listPrice": 32900,
+    "price": 29900,
+    "installments": [
+      {
+        "quantity": 10,
+        "value": 2990
+      }
+    ]
+  },
+  {
+    "productId": 4,
+    "productName": "CINTO SEMICROMO PRETO 40MM",
+    "category": "recommended",
+    "color": ["black", "brown", "green"],
+    "gender":{
+      "categoryName": "woman",
+      "subCategory":"sandals"
+    },
+    "size": ["x", "s", "m", "l", "xl"],
+    "stars": 3,
+    "imageUrl": "https://live.staticflickr.com/65535/52603472154_91b156f332_m.jpg",
+    "listPrice": null,
+    "price": 7990,
+    "installments": [
+      {
+          "quantity": 10,
+          "value": 2990
+        }
+    ]
+  },
+  {
+      "productId": 5,
       "productName": "SAPATO FLOATER PRETO",
-      "category": "recommended",
+      "category": "featured",
+      "color": ["black", "brown", "red", "blue", "green"],
+      "gender":{
+        "categoryName": "woman",
+        "subCategory":"top"
+      },
+      "size": ["38", "39", "40", "41"],
       "stars": 1,
       "imageUrl": "https://live.staticflickr.com/65535/52603215966_87d9cc904b_m.jpg",
       "listPrice": null,
@@ -16,9 +106,15 @@
       ]
     },
     {
-      "productId": 2,
+      "productId": 6,
       "productName": "SANDÁLIA LINHO BROWN",
       "category": "recommended",
+      "color": ["black", "brown", "red", "blue", "green"],
+      "gender":{
+        "categoryName": "woman",
+        "subCategory":"top"
+      },
+      "size": ["34", "35", "36", "37", "38", "39"],
       "stars": 4,
       "imageUrl": "https://live.staticflickr.com/65535/52602724257_b560974e6c_m.jpg",
       "listPrice": 29900,
@@ -31,9 +127,15 @@
       ]
     },
     {
-      "productId": 3,
+      "productId": 7,
       "productName": "BOTA MUSTANG PRETO",
       "category": "featured",
+      "color": ["black", "brown", "red", "blue", "green"],
+      "gender":{
+        "categoryName": "woman",
+        "subCategory":"accessories"
+      },
+      "size": ["34", "35", "36", "37", "38", "39", "40", "41"],
       "stars": 2,
       "imageUrl": "https://live.staticflickr.com/65535/52603215966_87d9cc904b_m.jpg",
       "listPrice": 32900,
@@ -46,9 +148,99 @@
       ]
     },
     {
-      "productId": 4,
+      "productId": 8,
+      "productName": "CINTO SEMICROMO PRETO 40MM",
+      "category": "featured",
+      "color": ["black", "brown", "red", "blue", "green"],
+      "gender":{
+        "categoryName": "woman",
+        "subCategory":"accessories"
+      },
+      "size": ["x", "s", "l", "m", "xl"],
+      "stars": 3,
+      "imageUrl": "https://live.staticflickr.com/65535/52603472154_91b156f332_m.jpg",
+      "listPrice": null,
+      "price": 7990,
+      "installments": [
+          {
+              "quantity": 10,
+              "value": 2990
+            }
+      ]
+    },
+    {
+      "productId": 9,
+      "productName": "SAPATO FLOATER PRETO",
+      "category": "recommended",
+      "color": ["black", "brown", "red"],
+      "gender":{
+        "categoryName": "men",
+        "subCategory":"shoes"
+      },
+      "size": [ "37", "38", "39", "40", "41"],
+      "stars": 1,
+      "imageUrl": "https://live.staticflickr.com/65535/52603215966_87d9cc904b_m.jpg",
+      "listPrice": null,
+      "price": 25990,
+      "installments": [
+        {
+          "quantity": 9,
+          "value": 2887
+        }
+      ]
+    },
+    {
+      "productId": 10,
+      "productName": "SANDÁLIA LINHO BROWN",
+      "category": "recommended",
+      "color": [ "blue", "green"],
+      "gender":{
+        "categoryName": "men",
+        "subCategory":"shoes"
+      },
+      "size": ["34", "35", "36", "37", "38", "39"],
+      "stars": 4,
+      "imageUrl": "https://live.staticflickr.com/65535/52602724257_b560974e6c_m.jpg",
+      "listPrice": 29900,
+      "price": 19900,
+      "installments": [
+        {
+          "quantity": 4,
+          "value": 4975
+        }
+      ]
+    },
+    {
+      "productId": 11,
+      "productName": "BOTA MUSTANG PRETO",
+      "category": "featured",
+      "color": ["blue", "green"],
+      "gender":{
+        "categoryName": "men",
+        "subCategory":"shoes"
+      },
+      "size": [ "37", "38", "39", "40"],
+      "stars": 2,
+      "imageUrl": "https://live.staticflickr.com/65535/52603215966_87d9cc904b_m.jpg",
+      "listPrice": 32900,
+      "price": 29900,
+      "installments": [
+        {
+          "quantity": 10,
+          "value": 2990
+        }
+      ]
+    },
+    {
+      "productId": 12,
       "productName": "CINTO SEMICROMO PRETO 40MM",
       "category": "recommended",
+      "color": ["black", "brown", "green"],
+      "gender":{
+        "categoryName": "men",
+        "subCategory":"belt"
+      },
+      "size": ["x", "s", "m", "l", "xl"],
       "stars": 3,
       "imageUrl": "https://live.staticflickr.com/65535/52603472154_91b156f332_m.jpg",
       "listPrice": null,
@@ -61,9 +253,15 @@
       ]
     },
     {
-        "productId": 1,
+        "productId": 13,
         "productName": "SAPATO FLOATER PRETO",
         "category": "featured",
+        "color": ["black", "brown", "red", "blue", "green"],
+        "gender":{
+          "categoryName": "men",
+          "subCategory":"jeans"
+        },
+        "size": ["38", "39", "40", "41"],
         "stars": 1,
         "imageUrl": "https://live.staticflickr.com/65535/52603215966_87d9cc904b_m.jpg",
         "listPrice": null,
@@ -76,9 +274,15 @@
         ]
       },
       {
-        "productId": 2,
+        "productId": 14,
         "productName": "SANDÁLIA LINHO BROWN",
         "category": "recommended",
+        "color": ["black", "brown", "red", "blue", "green"],
+        "gender":{
+          "categoryName": "men",
+          "subCategory":"jeans"
+        },
+        "size": ["34", "35", "36", "37", "38", "39"],
         "stars": 4,
         "imageUrl": "https://live.staticflickr.com/65535/52602724257_b560974e6c_m.jpg",
         "listPrice": 29900,
@@ -91,9 +295,15 @@
         ]
       },
       {
-        "productId": 3,
+        "productId": 15,
         "productName": "BOTA MUSTANG PRETO",
         "category": "featured",
+        "color": ["black", "brown", "red", "blue", "green"],
+        "gender":{
+          "categoryName": "men",
+          "subCategory":"belt"
+        },
+        "size": ["34", "35", "36", "37", "38", "39", "40", "41"],
         "stars": 2,
         "imageUrl": "https://live.staticflickr.com/65535/52603215966_87d9cc904b_m.jpg",
         "listPrice": 32900,
@@ -106,9 +316,15 @@
         ]
       },
       {
-        "productId": 4,
+        "productId": 16,
         "productName": "CINTO SEMICROMO PRETO 40MM",
         "category": "featured",
+        "color": ["black", "brown", "red", "blue", "green"],
+        "gender":{
+          "categoryName": "men",
+          "subCategory":"accessories"
+        },
+        "size": ["x", "s", "l", "m", "xl"],
         "stars": 3,
         "imageUrl": "https://live.staticflickr.com/65535/52603472154_91b156f332_m.jpg",
         "listPrice": null,
@@ -120,4 +336,4 @@
               }
         ]
       }
-  ]
+]

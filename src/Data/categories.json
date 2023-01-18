@@ -1,0 +1,44 @@
+[
+    {
+        "categoryId": 1,
+        "categoryName": "woman",
+        "subCategory": [
+            {
+                "subCategoryId": 11,
+                "checked": false,
+                "subCategoryName": "top"
+            },
+            {
+                "subCategoryId": 12,
+                "checked": false,
+                "subCategoryName": "sandals"
+            },
+            {
+                "subCategoryId": 13,
+                "checked": false,
+                "subCategoryName": "accessories"
+            }
+        ]
+    },
+    {
+        "categoryId": 2,
+        "categoryName": "men",
+        "subCategory": [
+            {
+                "subCategoryId": 21,
+                "checked": false,
+                "subCategoryName": "jeans"
+            },
+            {
+                "subCategoryId": 22,
+                "checked": false,
+                "subCategoryName": "shoes"
+            },
+            {
+                "subCategoryId": 23,
+                "checked": false,
+                "subCategoryName": "belt"
+            }
+        ]
+    }      
+]

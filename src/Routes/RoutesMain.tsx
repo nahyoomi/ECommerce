@@ -7,6 +7,7 @@ import Featured from '../Pages/Featured/Featured';
 import Recommended from '../Pages/Recommended/Recommended';
 import Checkout from '../Pages/Checkout/Checkout';
 import NotFound from '../Pages/NotFound/NotFound';
+import PDP from '../Pages/PDP/PDP';
 
 
 function RoutesMain() {
@@ -20,6 +21,7 @@ function RoutesMain() {
             <Route path='/recommended' element={<Recommended/>}/>
             <Route path='/checkout' element={<Checkout/>}/>
             <Route path='/notfound' element={<NotFound/>}/>
+            <Route path='/product/:id' element={<PDP/>}/>
         </Routes>
     </BrowserRouter>
   )

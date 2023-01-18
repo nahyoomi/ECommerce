@@ -1,10 +1,10 @@
-import {useContext} from 'react'
+import React from 'react'
 import Shelf from '../Shelf/Shelf'
-import {GlobalContext} from '../../Contexts/DataContext'
-import {IProduct} from '../../Types/types'
+import {IDataArrayProducts, IProduct} from '../../Types/types'
 import './PLPGrid.scss'
-function PLPGrid() {
-  const {products}: any = useContext(GlobalContext)
+
+function PLPGrid( {products}: IDataArrayProducts) {
+  
   return (
     <div className='grid'>
     {products.map((item : IProduct )=>(
