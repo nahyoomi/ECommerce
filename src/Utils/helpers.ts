@@ -28,3 +28,18 @@ export const getProduct = (products : IProduct[], id : string | undefined  | num
   return filteredProduct;
   
 }
+export const orderByProduct = (productsFilter : IProduct[], e:any)=>{
+  if(e.target.value === 'A-Z'){
+    const sortedList = [...productsFilter].sort((a, b) => (a.productName > b.productName ? 1 : a.productName < b.productName ? -1 : 0))
+    return sortedList 
+  }else if(e.target.value === 'LowerPrice'){
+    const sortedList = [...productsFilter].sort((a, b) => (a.price > b.price ? 1 : a.price < b.price ? -1 : 0))
+    return sortedList
+  }else if(e.target.value === 'HigherPrice'){
+    const sortedList = [...productsFilter].sort((a, b) => (a.price < b.price ? 1 : a.price > b.price ? -1 : 0))
+    return sortedList
+  }else if(e.target.value === 'BestRated'){
+    const sortedList = [...productsFilter].sort((a, b) => (a.stars < b.stars ? 1 : a.stars > b.stars ? -1 : 0))
+    return sortedList
+  }
+}
