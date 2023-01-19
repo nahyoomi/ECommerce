@@ -32,7 +32,7 @@
 - [Vite](https://vitejs.dev/)
 - [Typescript](https://www.typescriptlang.org/docs/)
 - [SASS](https://sass-lang.com/)
-- [NETLIFY](https://sass-lang.com/)
+- [NETLIFY](https://app.netlify.com/teams/nahyoomi/overview?_ga=2.84781081.1206755418.1652218935-61757142.1652218935)
 
 <br>
 <hr>
