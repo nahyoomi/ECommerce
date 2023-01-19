@@ -3,8 +3,9 @@
   {
     "productId": 1,
     "productName": "SAPATO FLOATER PRETO",
+    "productDetail": "little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.",
     "category": "recommended",
-    "color": ["black", "brown", "red"],
+    "color": ["color_three", "colorone", "color_two"],
     "gender":{
       "categoryName": "woman",
       "subCategory":"sandals"
@@ -24,8 +25,9 @@
   {
     "productId": 2,
     "productName": "SANDALIA LINHO BROWN",
+    "productDetail": "little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.",
     "category": "recommended",
-    "color": [ "blue", "green"],
+    "color": [ "color_three", "color_one"],
     "gender":{
       "categoryName": "woman",
       "subCategory":"sandals"
@@ -45,8 +47,9 @@
   {
     "productId": 3,
     "productName": "BOTA MUSTANG PRETO",
+    "productDetail": "little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.",
     "category": "featured",
-    "color": ["blue", "green"],
+    "color": ["color_three", "color_two"],
     "gender":{
       "categoryName": "woman",
       "subCategory":"top"
@@ -66,8 +69,9 @@
   {
     "productId": 4,
     "productName": "CINTO SEMICROMO PRETO 40MM",
+    "productDetail": "little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.",
     "category": "recommended",
-    "color": ["black", "brown", "green"],
+    "color": ["color_three", "colorone", "grcolor_twoeen"],
     "gender":{
       "categoryName": "woman",
       "subCategory":"sandals"
@@ -87,8 +91,9 @@
   {
       "productId": 5,
       "productName": "SAPATO FLOATER PRETO",
+      "productDetail": "little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.",
       "category": "featured",
-      "color": ["black", "brown", "red", "blue", "green"],
+      "color": ["color_three", "brown", "colortwo", "colorfour", "color_five"],
       "gender":{
         "categoryName": "woman",
         "subCategory":"top"
@@ -108,8 +113,9 @@
     {
       "productId": 6,
       "productName": "SANDALIA LINHO BROWN",
+      "productDetail": "little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.",
       "category": "recommended",
-      "color": ["black", "brown", "red", "blue", "green"],
+      "color": ["color_one", "colorthree", "rcolortwoed", "colorfive", "color_six"],
       "gender":{
         "categoryName": "woman",
         "subCategory":"top"
@@ -129,8 +135,9 @@
     {
       "productId": 7,
       "productName": "BOTA MUSTANG PRETO",
+      "productDetail": "little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.",
       "category": "featured",
-      "color": ["black", "brown", "red", "blue", "green"],
+      "color": ["color_two", "colorone", "colorthree", "colorsix", "color_four"],
       "gender":{
         "categoryName": "woman",
         "subCategory":"accessories"
@@ -150,8 +157,9 @@
     {
       "productId": 8,
       "productName": "CINTO SEMICROMO PRETO 40MM",
+      "productDetail": "little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.",
       "category": "featured",
-      "color": ["black", "brown", "red", "blue", "green"],
+      "color": ["color_two", "colorone", "colorthree", "colorfour", "color_five"],
       "gender":{
         "categoryName": "woman",
         "subCategory":"accessories"
@@ -171,8 +179,9 @@
     {
       "productId": 9,
       "productName": "SAPATO FLOATER PRETO",
+      "productDetail": "little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.",
       "category": "recommended",
-      "color": ["black", "brown", "red"],
+      "color": ["color_two", "colorthree", "color_five"],
       "gender":{
         "categoryName": "men",
         "subCategory":"shoes"
@@ -192,8 +201,9 @@
     {
       "productId": 10,
       "productName": "SANDALIA LINHO BROWN",
+      "productDetail": "little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.",
       "category": "recommended",
-      "color": [ "blue", "green"],
+      "color": [ "color_three", "color_one"],
       "gender":{
         "categoryName": "men",
         "subCategory":"shoes"
@@ -213,8 +223,9 @@
     {
       "productId": 11,
       "productName": "BOTA MUSTANG PRETO",
+      "productDetail": "little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.",
       "category": "featured",
-      "color": ["blue", "green"],
+      "color": ["color_two", "color_one"],
       "gender":{
         "categoryName": "men",
         "subCategory":"shoes"
@@ -234,8 +245,9 @@
     {
       "productId": 12,
       "productName": "CINTO SEMICROMO PRETO 40MM",
+      "productDetail": "little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.",
       "category": "recommended",
-      "color": ["black", "brown", "green"],
+      "color": ["color_two", "colorone", "color_three"],
       "gender":{
         "categoryName": "men",
         "subCategory":"belt"
@@ -255,8 +267,9 @@
     {
         "productId": 13,
         "productName": "SAPATO FLOATER PRETO",
+        "productDetail": "little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.",
         "category": "featured",
-        "color": ["black", "brown", "red", "blue", "green"],
+        "color": ["color_two", "colorthree", "colorfour", "colorfive", "color_six"],
         "gender":{
           "categoryName": "men",
           "subCategory":"jeans"
@@ -276,8 +289,9 @@
       {
         "productId": 14,
         "productName": "SANDALIA LINHO BROWN",
+        "productDetail": "little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.",
         "category": "recommended",
-        "color": ["black", "brown", "red", "blue", "green"],
+        "color": ["color_two", "colorone", "colorthree", "colorfour", "color_six"],
         "gender":{
           "categoryName": "men",
           "subCategory":"jeans"
@@ -297,8 +311,9 @@
       {
         "productId": 15,
         "productName": "BOTA MUSTANG PRETO",
+        "productDetail": "little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.",
         "category": "featured",
-        "color": ["black", "brown", "red", "blue", "green"],
+        "color": ["color_two", "colorone", "colorthree", "colorsix", "color_five"],
         "gender":{
           "categoryName": "men",
           "subCategory":"belt"
@@ -318,8 +333,9 @@
       {
         "productId": 16,
         "productName": "CINTO SEMICROMO PRETO 40MM",
+        "productDetail": "little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.",
         "category": "featured",
-        "color": ["black", "brown", "red", "blue", "green"],
+        "color": ["color_one", "color_three", "red", "blue", "green"],
         "gender":{
           "categoryName": "men",
           "subCategory":"accessories"

@@ -1,14 +1,16 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Basket from '../Basket/Basket'
+import { GlobalContext } from '../../Contexts/DataContext';
 import './CheckoutStepOne.scss'
 
 function CheckoutStepOne() {
+  const {orderData, setOrderData}: any = useContext(GlobalContext);
   return (
     <div className='summary'>
         <h3 className='summary__title'>Order Summary</h3>
         <span className='summary__text'>Review iteams in your basket.</span>
         <div className='summary__items'>
-            {/* <Basket/> */}
+          {orderData.map((product : any)=> <Basket order={product}/>)}
         </div>
         <div className='summary__total'>
             <p className='summary__total--subtotal'>Subtotal Amount:</p>

@@ -8,6 +8,7 @@ export interface IDataArrayProducts {
   export type IProduct = {
     "productId": number
     "productName": string
+    "productDetail":string
     "category": string
     "color": string[]
     "gender":{

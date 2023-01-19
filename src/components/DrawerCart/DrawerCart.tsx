@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import './DrawerCart.scss'
 import Drawer from 'react-modern-drawer'
 import 'react-modern-drawer/dist/index.css'
@@ -6,20 +6,35 @@ import { TiShoppingCart } from "react-icons/ti";
 import {setDraweView} from '../../Utils/helpers';
 import { GlobalContext } from '../../Contexts/DataContext';
 import Basket from '../Basket/Basket';
+import { getTotalPrice, getTotalCount } from '../../Utils/helpers'
+import { useNavigate } from "react-router-dom";
+
 
 function DrawerCart() {
+    let navigate = useNavigate();
     const { adjustment, orderData, setOrderData}: any = useContext(GlobalContext);
     const [isOpen, setIsOpen] = React.useState(false)
+    const [totalCounter, setItotalCounter] = React.useState(0)
+    const [totalPrice, setItotalPrice] = React.useState(0)
     const toggleDrawer = () => {
         setIsOpen((prevState) => !prevState)
     }
 
+    useEffect(()=>{
+        setItotalCounter(getTotalCount(orderData))
+        setItotalPrice(getTotalPrice(orderData))
+        
+    },[orderData])
+
+   
+  
+    
   return (
     <>
     <div className="cart" onClick={toggleDrawer}>
         <TiShoppingCart></TiShoppingCart>
         <div className="cart__pop">
-            <span>{orderData.length}</span>
+            <span>{totalCounter}</span>
         </div>
     </div>
         <Drawer
@@ -47,16 +62,16 @@ function DrawerCart() {
                         <p>Cart is empty, you can start adding products</p>
                         :
                         orderData.map((order: any)=>{
-                            return <Basket order={order}/>
+                            return <Basket order={order} key={order.productId} />
                         })
                     }
                 </section>
                 <div className='cart__container--footer'>
                     <div className='cart__container--footer-div'>
                         <p>Subtotal Amount:</p>
-                        <p>$240.00</p>
+                        <p>$ {totalPrice}</p>
                     </div>
-                    <button>CHECK OUT</button>
+                    <button onClick={() =>{navigate(`/checkout`) }}>CHECK OUT</button>
                 </div>
             </div>
         </Drawer>
