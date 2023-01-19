@@ -8,7 +8,7 @@ import { GlobalContext } from '../../Contexts/DataContext';
 import Basket from '../Basket/Basket';
 
 function DrawerCart() {
-    const { adjustment}: any = useContext(GlobalContext);
+    const { adjustment, orderData, setOrderData}: any = useContext(GlobalContext);
     const [isOpen, setIsOpen] = React.useState(false)
     const toggleDrawer = () => {
         setIsOpen((prevState) => !prevState)
@@ -19,7 +19,7 @@ function DrawerCart() {
     <div className="cart" onClick={toggleDrawer}>
         <TiShoppingCart></TiShoppingCart>
         <div className="cart__pop">
-            <span>1</span>
+            <span>{orderData.length}</span>
         </div>
     </div>
         <Drawer
@@ -33,14 +33,24 @@ function DrawerCart() {
                 <ul className='cart__container--heading'>
                     <li className='cart__container--heading-item'>
                         <span>My Cart</span>
-                        <span>(0 item)</span>
+                        <span>({orderData.length} items)</span>
                     </li>
                     <li className='cart__container--heading-btn'>
                         <button onClick={toggleDrawer}>Close</button>
-                        <button>Clear Cart</button>
+                        <button onClick={()=>{setOrderData([])}}>Clear Cart</button>
                     </li>
                 </ul>
-                <Basket/>
+                <section className='baskets'>
+                    {
+                        orderData.length === 0 
+                        ? 
+                        <p>Cart is empty, you can start adding products</p>
+                        :
+                        orderData.map((order: any)=>{
+                            return <Basket order={order}/>
+                        })
+                    }
+                </section>
                 <div className='cart__container--footer'>
                     <div className='cart__container--footer-div'>
                         <p>Subtotal Amount:</p>

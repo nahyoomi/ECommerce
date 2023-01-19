@@ -16,7 +16,7 @@
     "price": 25990,
     "installments": [
       {
-        "quantity": 9,
+        "quantity": 1,
         "value": 2887
       }
     ]
@@ -37,7 +37,7 @@
     "price": 19900,
     "installments": [
       {
-        "quantity": 4,
+        "quantity": 1,
         "value": 4975
       }
     ]
@@ -58,7 +58,7 @@
     "price": 29900,
     "installments": [
       {
-        "quantity": 10,
+        "quantity": 1,
         "value": 2990
       }
     ]
@@ -79,7 +79,7 @@
     "price": 7990,
     "installments": [
       {
-          "quantity": 10,
+          "quantity": 1,
           "value": 2990
         }
     ]
@@ -100,7 +100,7 @@
       "price": 25990,
       "installments": [
         {
-          "quantity": 9,
+          "quantity": 1,
           "value": 2887
         }
       ]
@@ -121,7 +121,7 @@
       "price": 19900,
       "installments": [
         {
-          "quantity": 4,
+          "quantity": 1,
           "value": 4975
         }
       ]
@@ -142,7 +142,7 @@
       "price": 29900,
       "installments": [
         {
-          "quantity": 10,
+          "quantity": 1,
           "value": 2990
         }
       ]
@@ -163,7 +163,7 @@
       "price": 7990,
       "installments": [
           {
-              "quantity": 10,
+              "quantity": 1,
               "value": 2990
             }
       ]
@@ -184,7 +184,7 @@
       "price": 25990,
       "installments": [
         {
-          "quantity": 9,
+          "quantity": 1,
           "value": 2887
         }
       ]
@@ -205,7 +205,7 @@
       "price": 19900,
       "installments": [
         {
-          "quantity": 4,
+          "quantity": 1,
           "value": 4975
         }
       ]
@@ -226,7 +226,7 @@
       "price": 29900,
       "installments": [
         {
-          "quantity": 10,
+          "quantity": 1,
           "value": 2990
         }
       ]
@@ -247,7 +247,7 @@
       "price": 7990,
       "installments": [
         {
-            "quantity": 10,
+            "quantity": 1,
             "value": 2990
           }
       ]
@@ -268,7 +268,7 @@
         "price": 25990,
         "installments": [
           {
-            "quantity": 9,
+            "quantity": 1,
             "value": 2887
           }
         ]
@@ -289,7 +289,7 @@
         "price": 19900,
         "installments": [
           {
-            "quantity": 4,
+            "quantity": 1,
             "value": 4975
           }
         ]
@@ -310,7 +310,7 @@
         "price": 29900,
         "installments": [
           {
-            "quantity": 10,
+            "quantity": 1,
             "value": 2990
           }
         ]
@@ -331,7 +331,7 @@
         "price": 7990,
         "installments": [
             {
-                "quantity": 10,
+                "quantity": 1,
                 "value": 2990
               }
         ]

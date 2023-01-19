@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react'
 import Layout from '../../components/Layout/Layout'
 import { HiArrowNarrowLeft } from "react-icons/hi";
-import {useParams} from "react-router-dom"
+import {NavLink, useParams} from "react-router-dom"
 import './PDP.scss'
 import { GlobalContext } from '../../Contexts/DataContext';
 import { IProduct } from '../../Types/types';
@@ -9,9 +9,14 @@ import {getProduct} from '../../Utils/helpers'
 
 function PDP() {
     const [ item, setItem]= useState<IProduct> ()
-    const {products}: any = useContext(GlobalContext)
+    const {products, orderData, setOrderData}: any = useContext(GlobalContext)
     const {id} = useParams();
     console.log(id)
+
+    const handleBuy = (event:any) => {
+        setOrderData([...orderData,item])
+        console.log('clickbuyshelf', orderData);
+    }
 
     useEffect(()=>{
         setItem(getProduct(products, id ))
@@ -25,10 +30,10 @@ function PDP() {
     <>
         <div className='pdpsection'>
             <section className='pdpsection__backpage'>
-                <a href='/shop'>
+                <NavLink to={'/shop'}>
                     <HiArrowNarrowLeft></HiArrowNarrowLeft> 
                     <span>Back to shop</span>
-                </a>
+                </NavLink>
             </section>
         <div className='pdpsection__fullproduct'>
             <section className='section__image'>
@@ -66,9 +71,11 @@ function PDP() {
                     <input type='button'className='color__six'/>
                 </div>
                 <p className='section__details--price'> $105.67 </p>
-                <input className='section__details--btn'
+                <input 
+                    className='section__details--btn'
                     type='button'
                     value='Add To Cart'
+                    onClick={handleBuy}
                 />
                 </div>
             </section>

@@ -1,15 +1,47 @@
+import { useContext } from "react";
 import "./Shelf.scss";
 import { useNavigate } from "react-router-dom";
 import { HiOutlineStar } from "react-icons/hi2";
 import {IitemProps} from '../../Types/types'
-
+import { GlobalContext } from "../../Contexts/DataContext";
  
 function Shelf({item}: IitemProps) {
+  const {orderData, setOrderData}: any = useContext(GlobalContext);
+  
   let navigate = useNavigate();
+
   const handleClick = () => {
     navigate(`/product/${item.productId}`);
     
   }
+  const handleBuy = (event:any) => {
+    event.stopPropagation();
+
+    const findRepeatElement = orderData.find((element: any)=>element.productId === item.productId)
+    
+    if(findRepeatElement){
+      
+      const newOrder = {
+        ...findRepeatElement,
+        "installments": [
+          {
+            "quantity": findRepeatElement.installments[0].quantity + 1,
+            "value": findRepeatElement.installments[0].value
+          }
+        ]
+      }
+      const nOrder= orderData.filter((element:any)=> element.productId !== item.productId )
+      setOrderData(
+         [...nOrder,newOrder ]
+      )
+      console.log("findRepeatElement",orderData);
+      return;
+    }
+    
+    setOrderData([...orderData,item])
+    console.log('clickbuyshelf', orderData);
+  }
+
   return (
     <ul className='cardcontainer' onClick={handleClick}>
       {item.listPrice != null
@@ -42,7 +74,7 @@ function Shelf({item}: IitemProps) {
           <p>por {item.price} </p>
         </li>
         <li className='cardcontainer__btn'>
-          <button>BUY</button>
+          <button onClick={handleBuy}>BUY</button>
         </li>
     </ul>
   )
