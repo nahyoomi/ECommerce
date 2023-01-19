@@ -2,12 +2,12 @@
     display: flex;
     justify-content: center;
     position: sticky;
-    top: 16px;
+    background: white;
+    top: 0px;
     padding: 24px 0;
     margin-bottom: 30px;
     z-index: 1; 
     &__list{
-        width: 50%;
         display: flex;
         justify-content: space-between;
         align-items: center;

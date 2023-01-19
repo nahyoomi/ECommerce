@@ -4,16 +4,23 @@
     margin: 0 auto;
     display: flex;
     border: 1px solid $dots;
+   /*  &::-webkit-scrollbar {
+        display: none;
+      } */
     &__controller{
         display: flex;
         flex-direction: column;
         &--button{
             font-size: 20px;
             width: 35px;
-            height: 72px;
+            height: 50%;
             border: 1px solid $dots;
             background-color:$primary-color;
             color: $placeholder-text;
+            @media(max-width: 360px){
+                width: 24px;
+            }
+
         }
     }
     &__wrapper{
@@ -21,6 +28,9 @@
         align-items: center;
         display: grid;
         grid-template-columns: 100px 1fr 80px 45px;
+        @media(max-width: 385px){
+            grid-template-columns: 85px 1fr 49px 31px;
+        }
         &--picture{
             width: 90px;
             height: 90px;
@@ -39,8 +49,8 @@
                 &__product{
                     text-decoration: underline;
                     margin: 16px 0;
-                    width: 200px;
-                    white-space: nowrap;
+                    /* width: 200px;
+                    white-space: nowrap; */
                     overflow: hidden;
                     text-overflow: ellipsis;
                     position: relative; 
@@ -102,4 +112,8 @@
         }
 
     }
+}
+.baskets {
+    overflow-y: auto;
+    height: 70vh;
 }
