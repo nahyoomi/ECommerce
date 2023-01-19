@@ -3,6 +3,7 @@ import './MenuDropDown.scss';
 import { HiMenu, HiX } from "react-icons/hi";
 import Drawer from 'react-modern-drawer'
 import 'react-modern-drawer/dist/index.css'
+import { NavLink } from 'react-router-dom';
 
 function MenuDropDown() {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -25,7 +26,9 @@ function MenuDropDown() {
             <button>My Orders</button>
           </div>
           <ul className='content__categories'>
-            <li>Home</li>
+            <NavLink to={'/'}>
+              <li>Home</li>
+            </NavLink>
             <li>Shop</li>
             <li>Featured</li>
             <li>Recommended</li>

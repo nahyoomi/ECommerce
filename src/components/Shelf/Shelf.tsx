@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { HiOutlineStar } from "react-icons/hi2";
 import {IitemProps} from '../../Types/types'
 import { GlobalContext } from "../../Contexts/DataContext";
- 
+import Swal from 'sweetalert2'
+
 function Shelf({item}: IitemProps) {
   const {orderData, setOrderData}: any = useContext(GlobalContext);
   
@@ -16,7 +17,12 @@ function Shelf({item}: IitemProps) {
   }
   const handleBuy = (event:any) => {
     event.stopPropagation();
-
+    Swal.fire({
+      title: 'Sucess!',
+      text: 'Product has been added to your cart',
+      icon: 'success',
+      confirmButtonText: 'Ok'
+    })
     const findRepeatElement = orderData.find((element: any)=>element.productId === item.productId)
     
     if(findRepeatElement){

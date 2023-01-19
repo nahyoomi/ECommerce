@@ -1,7 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './CheckoutStepTwo.scss'
+import { getTotalPrice } from '../../Utils/helpers'
+import { GlobalContext } from '../../Contexts/DataContext';
 
-function CheckoutStepTwo() {
+function CheckoutStepTwo({setStep}:any) {
+    const {orderData, setOrderData}: any = useContext(GlobalContext);
+    
   return (
     <div className='shipping'>
         <h3 className='shipping__title'>Shipping Details</h3>
@@ -32,31 +36,11 @@ function CheckoutStepTwo() {
                         <div className='form__fieldset--field'>
                             <div className='input'>
                                 <label>* Mobile Number</label>
-                                <div>
-                                  <div>Phone</div>
-                                  <input type='text' />
-                                    <div>
-                                        <div>Flag</div>
-                                    </div>  
-                                </div>
+                                <input type='text' />
                             </div>
                         </div> 
                     </div>  
-                    <div className='form__fieldset'>
-                        <div className='intshipping'>
-                            <label>Shipping Option</label>
-                            <div>
-                                <input type='checkbox'/>
-                                <label>
-                                    <h5>
-                                        International Shipping
-                                        <span>7-14 days</span>
-                                    </h5>
-                                    <h4>$50.00</h4>
-                                </label>
-                            </div>
-                        </div>
-                    </div>  
+                    
                 </div>
             </div>
             <br/>  
@@ -64,24 +48,20 @@ function CheckoutStepTwo() {
                 <table>
                     <tbody>
                         <tr>
-                            <td><span>International Shipment:</span></td>
-                            <td><h4>$0.00</h4></td>
-                        </tr>
-                        <tr>
                             <td><span>Subtotal:</span></td>
-                            <td><h4>$79.00</h4></td>
+                            <td><h4>$ { getTotalPrice(orderData) }</h4></td>
                         </tr>
                         <tr>
                             <td><span>Total:</span></td>
-                            <td><h2>$79.00</h2></td>
+                            <td><h2>$ { getTotalPrice(orderData) }</h2></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <br/>   
             <div className='shipping__formulary--actions'>
-                <button>Go Back</button>
-                <button>Next Step</button>
+                <button onClick={()=> setStep(1)}>Go Back</button>
+                <button onClick={()=> setStep(3)}>Next Step</button>
             </div>  
         </form>
 
