@@ -30,13 +30,13 @@ function BannerCarrousel() {
         <SwiperSlide className='banner__img'>
           {adjustment <= 1024 
             ?  <img src={images.clothingBanner.src}></img>
-            :  <img src={images.DesktopBanner1.src}></img>
+            :  <img src={images.DesktopBanner3.src}></img>
           }    
         </SwiperSlide>
         <SwiperSlide className='banner__img'>
         {adjustment <= 1024 
             ?  <img src={images.coupleBanner.src}></img>
-            :  <img src={images.DesktopBanner2.src}></img>
+            :  <img src={images.DesktopBanner4.src}></img>
         } 
         </SwiperSlide>
         <SwiperSlide className='banner__img'>

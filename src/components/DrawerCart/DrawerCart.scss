@@ -33,8 +33,10 @@
     &-btn{
         & button:first-child {
             border-right: none !important;
+            cursor: pointer;
          }
         & button:first-child, :last-child {
+            cursor: pointer;
             color:$placeholder-text;
             font-size: 12px;
             font-weight: bold;
@@ -73,6 +75,7 @@
         color: $primary-color;
         background-color: $Primary-titles;
         margin-right: 16px;
+        cursor: pointer;
     }
   } 
 }

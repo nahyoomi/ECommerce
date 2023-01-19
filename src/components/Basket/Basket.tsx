@@ -1,11 +1,18 @@
 import { ListItemAvatar } from '@mui/material';
 import React, {useContext} from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import {IitemProps} from '../../Types/types'
 import { GlobalContext } from '../../Contexts/DataContext';
 import './Basket.scss'
 
 function Basket({order}: any) {
     const {orderData, setOrderData}: any = useContext(GlobalContext);
+
+    let navigate = useNavigate();
+
+    const handleClick = () => {
+      navigate(`/product/${order.productId}`);  
+    }
 
     const handleAdd = (order: any) =>{
         const newOrder = {
@@ -63,9 +70,7 @@ function Basket({order}: any) {
                 <img className='image' src={order.imageUrl}></img>
             </div>
             <div className='basket__wrapper--details'>
-                <Link to={'*'} className='linked'>
-                    <h4 className='linked__product'>{order.productName}</h4>
-                </Link>
+                <h4  onClick={handleClick} className='linked__product'>{order.productName}</h4>
                 <div className='specs'>
                     <div className='specs__quantity'>
                         <span>Quantity</span>
@@ -77,17 +82,19 @@ function Basket({order}: any) {
                     </div> 
                     <div className='specs__color'>
                         <span>Color</span>
-                        <div></div>
+                        <p></p>
                     </div> 
                 </div>
             </div>
             <div className='basket__wrapper--price'>
                 <h4>$ {order.price}</h4>
             </div>
-            <button onClick={()=>{handleRemove(order)}} className='basket__wrapper--button'>X</button>
+            <button onClick={()=>{handleRemove(order)}} className='basket__wrapper--close'>X</button>
         </div>
     </div>
   )
 }
 
 export default Basket
+
+

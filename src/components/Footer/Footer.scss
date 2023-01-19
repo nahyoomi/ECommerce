@@ -8,7 +8,7 @@
         justify-content: space-evenly;
         align-items: center;
     }
-    &_location{
+    &__location{
         h3{
             font-size: 22px;
             margin: 0;
@@ -30,13 +30,16 @@
             } 
         }
     }
-    &_contact{
+    &__contact{
         display: flex;
         justify-content: center;
         &--btns{
             display: flex;
             flex-direction: column;
             padding: 0px 20px;
+            a{
+                text-decoration: none;
+            }
             button{
                 display: flex;
                 justify-content: center;
@@ -54,7 +57,7 @@
             }  
         }
     }
-    &_branding{
+    &__branding{
        &--list{
         list-style: none;
         display: flex;

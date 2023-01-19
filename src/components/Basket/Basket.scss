@@ -10,7 +10,7 @@
         &--button{
             font-size: 20px;
             width: 35px;
-            height: 45px;
+            height: 72px;
             border: 1px solid $dots;
             background-color:$primary-color;
             color: $placeholder-text;
@@ -20,7 +20,7 @@
         width: 100%;
         align-items: center;
         display: grid;
-        grid-template-columns: 100px 1fr 80px 40px;
+        grid-template-columns: 100px 1fr 80px 45px;
         &--picture{
             width: 90px;
             height: 90px;
@@ -37,13 +37,22 @@
                 text-decoration: none;
                 color: #101010; 
                 &__product{
-                    text-decoration: underline; 
+                    text-decoration: underline;
+                    margin: 16px 0;
+                    width: 200px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    position: relative; 
                 } 
             }
             .specs{
                 display: grid;
                 grid-template-columns: repeat(3,1fr);
                 &__quantity{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     span{
                         color: #8d8d8d;
                         font-size: 12px;
@@ -52,6 +61,9 @@
                     }
                 }
                 &__size{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     span{
                         color: #8d8d8d;
                         font-size: 12px;
@@ -60,34 +72,33 @@
                     }  
                 }
                 &__color{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     span{
                         color: #8d8d8d;
                         font-size: 12px;
                         display: block;
                         margin-bottom: 5px; 
                     }
-                    div {
+                    p {
                         background-color: rgb(0, 0, 0);
                         width: 15px;
                         height: 15px;
                         border-radius: 50%;
+                        margin-top: 20px;
                     }
                 }
             }
-            &--price{
-                margin-right: 2rem;  
-            }
-            &--button{
-/*                 align-self: center;
-                border: 1px solid #e1e1e1;
-                color: #4a4a4a;  */
-                color: #585858;
-                font-size: 12px;
-                font-weight: bold;
-                padding: 10px;
-                background-color: #FFFFFF;
-                border: 1px solid #BFBFBF;
-            }
+        }
+        &--price{
+            margin-right: 1rem;  
+        }
+        &--close{
+            height: 35px;
+            margin: 5px;
+            background-color: white;
+            border: 1px solid #BFBFBF; 
         }
 
     }

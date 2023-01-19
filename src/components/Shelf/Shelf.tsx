@@ -74,7 +74,7 @@ function Shelf({item}: IitemProps) {
           <p>por {item.price} </p>
         </li>
         <li className='cardcontainer__btn'>
-          <button onClick={handleBuy}>BUY</button>
+          <button onClick={handleBuy}>Add To Cart</button>
         </li>
     </ul>
   )
