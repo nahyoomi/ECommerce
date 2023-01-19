@@ -1,7 +1,7 @@
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#specifications">Specifications</a> •
-  <a href="https://linkproyect">Demo</a> •
+  <a href="https://shopit-ecommerce.netlify.app/">Demo</a> •
 </p>
 
 <div align="">
