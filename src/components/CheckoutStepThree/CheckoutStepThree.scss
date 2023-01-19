@@ -1,0 +1,13 @@
+
+.form{
+    width: 70rem;
+    margin: auto;
+    &__title{
+        text-align: center;
+    }
+    &__subtitle{
+      padding: 1.2rem;
+      display: block;
+        width: 100%;  
+    }
+}

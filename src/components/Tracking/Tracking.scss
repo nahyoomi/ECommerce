@@ -1,0 +1,64 @@
+.tracking{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 16px;
+    padding: 24px 0;
+    margin-bottom: 30px;
+    z-index: 1; 
+    &__list{
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        margin: auto;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 14px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 85%;
+            height: 3px;
+            background: hsla(0,0%,88.2%,.5);
+        } 
+        &--item{
+            display: flex;
+            justify-content: center;
+            width: 100px;
+            align-items: center;
+            flex-direction: column;
+            z-index: 1;
+            .circle{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                flex-direction: column;
+                z-index: 1;
+                &__icon{
+                
+                    &--step{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 14px;
+                        margin: 0;
+                        padding: 1px;
+                        background: #000;
+                        color: #fff;
+                        border-radius: 50%;
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+                &__subtitle {
+                    margin: 8px;
+                }  
+            }  
+        }
+    }
+}
