@@ -7,6 +7,7 @@ import ProductCarrousel from '../../components/ProductCarrousel/ProductCarrousel
 import { GlobalContext } from '../../Contexts/DataContext';
 import { IProduct } from '../../Types/types';
 import {getProduct} from '../../Utils/helpers'
+import Swal from 'sweetalert2'
 
 function PDP() {
     const [ item, setItem]= useState<IProduct> ()
@@ -21,6 +22,13 @@ function PDP() {
     }, [])
 
     const handleBuy = (event:any) => {
+        Swal.fire({
+            title: 'Sucess!',
+            text: 'Product has been added to your cart',
+            icon: 'success',
+            confirmButtonText: 'Ok'
+          })
+
         const findRepeatElement = orderData.find((element: any)=>element.productId === item?.productId)
     
         if(findRepeatElement){
