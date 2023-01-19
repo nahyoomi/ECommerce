@@ -3,7 +3,7 @@ import BannerCarrousel from '../../components/BannerCarrousel/BannerCarrousel'
 import Layout from '../../components/Layout/Layout'
 import PLPGrid from '../../components/PLPGrid/PLPGrid'
 import { GlobalContext } from '../../Contexts/DataContext'
-
+import './Recommended.scss'
 function Recommended() {
   const { productsRecommended }: any= useContext(GlobalContext)
   return (
@@ -12,9 +12,9 @@ function Recommended() {
       <section>
         <BannerCarrousel/>
       </section>
-      <section>
-        <PLPGrid products={productsRecommended}/>
-      </section>
+        <section className='boxing'>
+          <PLPGrid products={productsRecommended}/>
+        </section>
       </>
     </Layout>
   )
