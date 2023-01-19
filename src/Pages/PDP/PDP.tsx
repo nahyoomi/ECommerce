@@ -3,24 +3,48 @@ import Layout from '../../components/Layout/Layout'
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import {NavLink, useParams} from "react-router-dom"
 import './PDP.scss'
+import ProductCarrousel from '../../components/ProductCarrousel/ProductCarrousel';
 import { GlobalContext } from '../../Contexts/DataContext';
 import { IProduct } from '../../Types/types';
 import {getProduct} from '../../Utils/helpers'
 
 function PDP() {
     const [ item, setItem]= useState<IProduct> ()
-    const {products, orderData, setOrderData}: any = useContext(GlobalContext)
+    const {products, orderData, setOrderData,productsRecommended}: any = useContext(GlobalContext)
     const {id} = useParams();
     console.log(id)
 
-    const handleBuy = (event:any) => {
-        setOrderData([...orderData,item])
-        console.log('clickbuyshelf', orderData);
-    }
+    
 
     useEffect(()=>{
         setItem(getProduct(products, id ))
     }, [])
+
+    const handleBuy = (event:any) => {
+        const findRepeatElement = orderData.find((element: any)=>element.productId === item?.productId)
+    
+        if(findRepeatElement){
+          
+          const newOrder = {
+            ...findRepeatElement,
+            "installments": [
+              {
+                "quantity": findRepeatElement.installments[0].quantity + 1,
+                "value": findRepeatElement.installments[0].value
+              }
+            ]
+          }
+          const nOrder= orderData.filter((element:any)=> element.productId !== item?.productId )
+          setOrderData(
+             [...nOrder,newOrder ]
+          )
+          console.log("findRepeatElement",nOrder);
+          return;
+        }
+        
+        setOrderData([...orderData,item])
+        console.log('clickbuyshelf', orderData);
+    }
 
    if(item === undefined ) {
     <p>Loading...</p>
@@ -49,26 +73,26 @@ function PDP() {
             </section>
             <section className='section__details'>
                 <div className='container'>
-                <p className='section__details--title'>Salt</p>
                 <h3 className='section__details--name'>{item.productName}</h3>
-                <p className='section__details--description'> little desccription of th product to capture clients attention dolelorem ipsumfsfic dsidhffk jfdh djdhdj.</p>
+                <p className='section__details--description'> {item.productDetail} </p>
                 <p className='section__details--select'>Type of the product</p>
                 <div>
                 <select className='section__details--selector'>
                     <option>--Select--</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
+                    {
+                        item.size.map((item)=>(
+                            <option> {item} </option>
+                        ))
+                    }
                 </select>
                 </div>
                 <div className='section__details--sdk'>
                     <p>Choose color</p>
-                    <input type='button'className='color__one'/>
-                    <input type='button'className='color__two'/>
-                    <input type='button'className='color__three'/>
-                    <input type='button'className='color__four'/>
-                    <input type='button'className='color__five'/>
-                    <input type='button'className='color__six'/>
+                    {
+                        item.color.map((item)=>(
+                            <input type='button'className={item}/>
+                        ))
+                    }
                 </div>
                 <p className='section__details--price'> $105.67 </p>
                 <input 
@@ -82,6 +106,9 @@ function PDP() {
         </div>
             
         </div> 
+        <h2 className='tittle'>Recommended</h2>
+        <hr className='line'/>
+        <ProductCarrousel category={productsRecommended} />
     </>
     </Layout>
   )

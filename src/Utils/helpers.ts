@@ -45,3 +45,18 @@ export const orderByProduct = (productsFilter : IProduct[], e:any)=>{
     return productsFilter;
   }
 }
+export const getTotalPrice = (orderData:IProduct[]) => {
+  let total=0
+  orderData.map((item:IProduct)=>{ 
+  total = (item.installments[0].quantity * item.price ) + total
+}) 
+return total 
+}
+
+export const getTotalCount = (orderData:IProduct[]) => {
+  let total=0
+      orderData.map((item:IProduct)=>{ 
+      total = item.installments[0].quantity + total
+  })
+return total 
+}
