@@ -8,13 +8,10 @@ function SubscriptionForm() {
     name:"",
     email:"",
   })
-  /* const { name, email } = subscribe */
 
   const handleSubmit =(e:any)=>{
     e.preventDefault();
     setStep(true)
-    console.log("subscribe",subscribe);
-    
   }
 
   const handleChange =(e:any)=>{

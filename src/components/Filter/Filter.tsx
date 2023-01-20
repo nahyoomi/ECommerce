@@ -2,7 +2,10 @@ import React, { useEffect,useContext } from 'react'
 import './Filter.scss'
 import { GlobalContext } from '../../Contexts/DataContext';
 import CategoryJson from '../../Data/categories.json'
-
+import {IProduct,ISubCategoryProps,subCategory} from '../../Types/types'
+export type IiOrderProps  = {
+  subCategory: IProduct
+}
 function Filter() {
   const { productsFilter, setProductsFilter, products, adjustment }:any = useContext(GlobalContext);
   const [isOpen, setIsOpen] = React.useState(adjustment<1024?'notOpen':'isOpen')
@@ -14,26 +17,23 @@ function Filter() {
     }else{
       setIsOpen('isOpen')
     } 
-    console.log(isOpen);
-    
   }) 
 
 
-const handleOnChange = ({subCategory,category}:any) => {
+const handleOnChange = ({subCategory}:any) => {
   subCategory.checked = !subCategory.checked;
 
 
   if(subCategory.checked){
 
-    const filteredProducts = productsFilter.filter((product:any) => {
+    const filteredProducts = productsFilter.filter((product:IProduct) => {
       return product.gender.subCategory === subCategory.subCategoryName
     } )
     
     setProductsFilter(filteredProducts)
   }else{
     setProductsFilter(products)
-  }
-  
+  } 
 };
 
   return (
@@ -56,7 +56,7 @@ const handleOnChange = ({subCategory,category}:any) => {
                         id={`custom-checkbox-${subCategory.subCategoryId}`}
                         name={subCategory.subCategoryName}
                         value="true"
-                        onChange={() => handleOnChange({subCategory,category})}
+                        onChange={() => handleOnChange({subCategory})}
                       />
                       <label htmlFor={`custom-checkbox-${subCategory.subCategoryId}`}>{subCategory.subCategoryName}</label>
                     </li>

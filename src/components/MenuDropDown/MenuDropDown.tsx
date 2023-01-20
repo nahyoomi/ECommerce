@@ -26,12 +26,18 @@ function MenuDropDown() {
             <button>My Orders</button>
           </div>
           <ul className='content__categories'>
-            <NavLink to={'/'}>
+            <NavLink to={'/'} className='content__categories--link'>
               <li>Home</li>
             </NavLink>
-            <li>Shop</li>
-            <li>Featured</li>
-            <li>Recommended</li>
+            <NavLink to={'/shop'} className='content__categories--link'>
+              <li>Shop</li>
+            </NavLink>
+            <NavLink to={'/featured'} className='content__categories--link'>
+              <li>Featured</li>
+            </NavLink>
+            <NavLink to={'/recommended'} className='content__categories--link'>
+              <li>Recommended</li>
+            </NavLink>
           </ul>
         </div>
         </Drawer>

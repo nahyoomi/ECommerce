@@ -8,6 +8,7 @@ import { GlobalContext } from '../../Contexts/DataContext';
 import Basket from '../Basket/Basket';
 import { getTotalPrice, getTotalCount } from '../../Utils/helpers'
 import { useNavigate } from "react-router-dom";
+import {IProduct} from '../../Types/types'
 
 
 function DrawerCart() {
@@ -61,7 +62,7 @@ function DrawerCart() {
                         ? 
                         <p>Cart is empty, you can start adding products</p>
                         :
-                        orderData.map((order: any)=>{
+                        orderData.map((order: IProduct)=>{
                             return <Basket order={order} key={order.productId} />
                         })
                     }

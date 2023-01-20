@@ -1,1 +1,22 @@
 @import '../../Styles/vars';
+.registration{
+    max-width: 300px;
+    margin: 30px auto;
+    padding: 30px 0;
+    background: aliceblue;
+}
+.registration__title{
+    text-align: center;
+}
+.registration__input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.registration__forget{
+    text-align: center;
+    margin-bottom: 60px;
+}

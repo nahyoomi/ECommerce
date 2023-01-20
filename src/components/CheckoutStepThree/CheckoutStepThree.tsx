@@ -4,8 +4,9 @@ import './CheckoutStepThree.scss'
 import { useNavigate } from "react-router-dom";
 import { getTotalPrice } from '../../Utils/helpers'
 import { FaCcVisa } from "react-icons/fa";
+import { IsetStepProps, IProduct } from '../../Types/types'
 
-function CheckoutStepThree({setStep}:any) {
+function CheckoutStepThree({setStep}:IsetStepProps) {
     const {orderData}: any = useContext(GlobalContext);
     let navigate = useNavigate();
   return (

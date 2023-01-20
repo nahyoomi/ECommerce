@@ -2,9 +2,10 @@ import { useContext } from "react";
 import "./Shelf.scss";
 import { useNavigate } from "react-router-dom";
 import { HiOutlineStar } from "react-icons/hi2";
-import {IitemProps} from '../../Types/types'
+import {IitemProps,IProduct} from '../../Types/types'
 import { GlobalContext } from "../../Contexts/DataContext";
 import Swal from 'sweetalert2'
+import { Rating } from 'react-simple-star-rating'
 
 function Shelf({item}: IitemProps) {
   const {orderData, setOrderData}: any = useContext(GlobalContext);
@@ -23,7 +24,7 @@ function Shelf({item}: IitemProps) {
       icon: 'success',
       confirmButtonText: 'Ok'
     })
-    const findRepeatElement = orderData.find((element: any)=>element.productId === item.productId)
+    const findRepeatElement = orderData.find((element: IProduct)=>element.productId === item.productId)
     
     if(findRepeatElement){
       
@@ -36,16 +37,14 @@ function Shelf({item}: IitemProps) {
           }
         ]
       }
-      const nOrder= orderData.filter((element:any)=> element.productId !== item.productId )
+      const nOrder= orderData.filter((element:IProduct)=> element.productId !== item.productId )
       setOrderData(
          [...nOrder,newOrder ]
       )
-      console.log("findRepeatElement",orderData);
       return;
     }
     
     setOrderData([...orderData,item])
-    console.log('clickbuyshelf', orderData);
   }
 
   return (
@@ -63,12 +62,7 @@ function Shelf({item}: IitemProps) {
             <p>{item.productName}</p>
         </li>
         <li className='cardcontainer__icons'>
-            <HiOutlineStar></HiOutlineStar>
-            <HiOutlineStar></HiOutlineStar>
-            <HiOutlineStar></HiOutlineStar>
-            <HiOutlineStar></HiOutlineStar>
-            <HiOutlineStar></HiOutlineStar>
-            <HiOutlineStar></HiOutlineStar>
+        <Rating size={20}  initialValue={item.stars } />
         </li>
         <li className='cardcontainer__pricecross'>
           {item.listPrice === null

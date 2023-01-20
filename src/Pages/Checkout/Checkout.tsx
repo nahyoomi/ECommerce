@@ -10,7 +10,7 @@ function Checkout() {
   return (
     <Layout>
       <>
-        <Tracking/>
+        <Tracking step={step} />
         {
           step ===1 && <CheckoutStepOne setStep={setStep}/>
         }

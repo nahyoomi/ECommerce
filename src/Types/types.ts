@@ -7,7 +7,7 @@ export interface IDataArrayProducts {
 
   export type IProduct = {
     "productId": number
-    "productName": string
+    "productName": string 
     "productDetail":string
     "category": string
     "color": string[]
@@ -25,11 +25,27 @@ export interface IDataArrayProducts {
         value: number;
     }[];
 }
-
+export type subCategory = {
+    "subCategoryId": number
+    "checked": boolean
+    "subCategoryName": string    
+}[]
+export type ISubCategoryProps  = {
+    subCategory: subCategory
+}
 export type IitemProps  = {
     item: IProduct
 }
 
  export interface IPropsChildren {
     children: JSX.Element;
-  }
+}
+  export type IiOrderProps  = {
+    order: IProduct
+}
+export type IsetStepProps  = {
+    setStep: React.Dispatch<React.SetStateAction<number>>
+}
+export type IStepProps  = {
+    step: number
+}

@@ -1,3 +1,4 @@
+@import '../../Styles/vars';
 .tracking{
     display: flex;
     justify-content: center;
@@ -14,6 +15,9 @@
         padding: 0;
         margin: auto;
         position: relative;
+        @media (min-width: 480px) {
+            width: 70%;
+        }
         &::before{
             content: "";
             position: absolute;
@@ -39,6 +43,9 @@
                 width: 100px;
                 flex-direction: column;
                 z-index: 1;
+                .active{
+                   background: $details;  
+                }
                 &__icon{
                 
                     &--step{
@@ -48,7 +55,7 @@
                         font-size: 14px;
                         margin: 0;
                         padding: 1px;
-                        background: #000;
+                        background: rgb(54, 54, 54);
                         color: #fff;
                         border-radius: 50%;
                         width: 30px;

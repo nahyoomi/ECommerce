@@ -1,11 +1,11 @@
 import { ListItemAvatar } from '@mui/material';
 import React, {useContext} from 'react'
 import { useNavigate } from 'react-router-dom'
-import {IitemProps} from '../../Types/types'
+import {IitemProps,IiOrderProps,IProduct} from '../../Types/types'
 import { GlobalContext } from '../../Contexts/DataContext';
 import './Basket.scss'
 
-function Basket({order}: any) {
+function Basket({order}: IiOrderProps) {
     const {orderData, setOrderData}: any = useContext(GlobalContext);
 
     let navigate = useNavigate();
@@ -14,7 +14,7 @@ function Basket({order}: any) {
       navigate(`/product/${order.productId}`);  
     }
 
-    const handleAdd = (order: any) =>{
+    const handleAdd = (order: IProduct) =>{
         const newOrder = {
             ...order,
             "installments": [
@@ -25,18 +25,16 @@ function Basket({order}: any) {
             ]
           }
            
-        const nOrder= orderData.filter((item:any)=> item.productId !== order.productId )
+        const nOrder= orderData.filter((item:IProduct)=> item.productId !== order.productId )
          setOrderData(
             [...nOrder,newOrder ]
             )  
-        console.log(orderData);  
     }
 
-    const handleLess = (order: any) =>{
+    const handleLess = (order: IProduct) =>{
         if(order.installments[0].quantity <= 1){
-            const nOrder= orderData.filter((item:any)=> item.productId !== order.productId )
+            const nOrder= orderData.filter((item:IProduct)=> item.productId !== order.productId )
             setOrderData(nOrder)
-            console.log(orderData);
             return;  
         }
         const newOrder = {
@@ -48,15 +46,14 @@ function Basket({order}: any) {
               }
             ]
           }
-          const nOrder= orderData.filter((item:any)=> item.productId !== order.productId )
+          const nOrder= orderData.filter((item:IProduct)=> item.productId !== order.productId )
          setOrderData(
             [...nOrder,newOrder ]
             )  
-        console.log(orderData);
     }
 
-    const handleRemove = (order : any)=> {
-         const newOrder = orderData.filter((item: any)=> item.productId !== order.productId)
+    const handleRemove = (order : IProduct)=> {
+         const newOrder = orderData.filter((item: IProduct)=> item.productId !== order.productId)
          setOrderData(newOrder)
     }
   return (
@@ -96,5 +93,3 @@ function Basket({order}: any) {
 }
 
 export default Basket
-
-

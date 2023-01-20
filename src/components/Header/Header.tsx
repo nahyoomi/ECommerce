@@ -8,7 +8,7 @@ import Navbar from "../Navbar/Navbar";
 import { NavLink } from "react-router-dom";
 
 export default function Header(){
-  const [showMenu, setShowMenu]= useState<any>(false);
+  const [showMenu, setShowMenu]= useState(false);
   const handleModal = ()=>{
     setShowMenu(true)
   }

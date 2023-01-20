@@ -2,27 +2,41 @@ import React, {useContext} from 'react'
 import './CheckoutStepTwo.scss'
 import { getTotalPrice } from '../../Utils/helpers'
 import { GlobalContext } from '../../Contexts/DataContext';
+import { IsetStepProps } from '../../Types/types'
 
-function CheckoutStepTwo({setStep}:any) {
+function CheckoutStepTwo({setStep}:IsetStepProps) {
     const {orderData, setOrderData}: any = useContext(GlobalContext);
-    
+    const hanblesubmit =(e:any)=> {
+        e.preventDefault();
+        setStep(3)
+    }
   return (
     <div className='shipping'>
         <h3 className='shipping__title'>Shipping Details</h3>
-        <form className='shipping__formulary'>
+        <form  onSubmit={hanblesubmit} className='shipping__formulary'>
             <div className='shipping__formulary--wrapper'>
                 <div className='form'>
                     <div className='form__fieldset'>
                         <div className='form__fieldset--field'>
                             <div className='input'>
                                 <label>* Full Name</label>
-                                <input type='text' />
+                                <input 
+                                    type='text'
+                                    required
+                                    min="3"
+                                    max="30"
+                                />
                             </div>
                         </div>
                         <div className='form__fieldset--field'>
                             <div className='input'>
                                 <label>* Email Address</label>
-                                <input type='text' />
+                                <input 
+                                    type='email'
+                                    required
+                                    min="3"
+                                    max="30"
+                                />
                             </div>
                         </div>
                     </div>  
@@ -30,13 +44,23 @@ function CheckoutStepTwo({setStep}:any) {
                         <div className='form__fieldset--field'>
                             <div className='input'>
                                 <label>* Shipping Address</label>
-                                <input type='text' />
+                                <input 
+                                    type='text'
+                                    required
+                                    min="3"
+                                    max="30"
+                                />
                             </div>
                         </div>
                         <div className='form__fieldset--field'>
                             <div className='input'>
                                 <label>* Mobile Number</label>
-                                <input type='text' />
+                                <input 
+                                    type='text'
+                                    required
+                                    min="6"
+                                    max="12"
+                                />
                             </div>
                         </div> 
                     </div>  
@@ -61,7 +85,7 @@ function CheckoutStepTwo({setStep}:any) {
             <br/>   
             <div className='shipping__formulary--actions'>
                 <button onClick={()=> setStep(1)}>Go Back</button>
-                <button onClick={()=> setStep(3)}>Next Step</button>
+                <button type='submit'>Next Step</button>
             </div>  
         </form>
 
