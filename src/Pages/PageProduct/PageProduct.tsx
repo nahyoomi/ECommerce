@@ -13,9 +13,7 @@ function PageProduct() {
     const [ item, setItem]= useState<IProduct> ()
     const {products, orderData, setOrderData,productsRecommended}: any = useContext(GlobalContext)
     const {id} = useParams();
-    console.log(id)
 
-    
 
     useEffect(()=>{
         setItem(getProduct(products, id ))
@@ -29,7 +27,7 @@ function PageProduct() {
             confirmButtonText: 'Ok'
           })
 
-        const findRepeatElement = orderData.find((element: any)=>element.productId === item?.productId)
+        const findRepeatElement = orderData.find((element: IProduct)=>element.productId === item?.productId)
     
         if(findRepeatElement){
           
@@ -42,16 +40,13 @@ function PageProduct() {
               }
             ]
           }
-          const nOrder= orderData.filter((element:any)=> element.productId !== item?.productId )
+          const nOrder= orderData.filter((element:IProduct)=> element.productId !== item?.productId )
           setOrderData(
              [...nOrder,newOrder ]
           )
-          console.log("findRepeatElement",nOrder);
           return;
         }
-        
         setOrderData([...orderData,item])
-        console.log('clickbuyshelf', orderData);
     }
 
   return (

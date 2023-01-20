@@ -1,49 +1,88 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink,useNavigate } from 'react-router-dom'
+import React, {useState} from 'react'
 import Layout from '../../components/Layout/Layout'
+import './Login.scss'
+import Swal from 'sweetalert2'
 
 function Login() {
+  let navigate = useNavigate();
+  const [ subscribe, setSubscribe]= useState({
+    name:"",
+    email:"",
+  })
+
+  const handleSubmit =(e:any)=>{
+    e.preventDefault();
+    Swal.fire({
+      title: 'Sucess!',
+      text: 'Succesful Login',
+      icon: 'success',
+      confirmButtonText: 'Ok'
+    })
+    navigate(`/`);
+  }
+
+  const handleChange =(e:any)=>{
+    const { target } = e;
+    const { name, value } = target;
+    const newValues = {
+      ...subscribe,
+      [name]: value,
+    };
+    setSubscribe(newValues)
+  }
+
   return (
     <Layout>
         <div className='registration'>
           <div className='registration__fields'>
             <div>
-              <h3>Sing in to ShopIt!</h3>
+              <h3 className='registration__title' >Sing in to ShopIt!</h3>
               <br/>
               <div>
-                <form>
+                <form onSubmit={handleSubmit} >
                   <div>
-                    <div>
+                    <div className='registration__input'>
                       <label>Email</label>
-                      <input type='email'/>
+                      <input
+                        name="email"
+                        type="email"
+                        value={subscribe.email}
+                        onChange={handleChange}
+                        placeholder='Enter your email'
+                        required
+                        min="3"
+                        max="30"
+                      />
                     </div>
                   </div>
                   <div>
-                    <div>
+                    <div className='registration__input'>
                       <label>Password</label>
-                      <input type='password'/>
+                      <input
+                        name="name"
+                        type="password"
+                        value={subscribe.name}
+                        onChange={handleChange}
+                        placeholder='Enter your name'
+                        required
+                        min="3"
+                        max="30"
+                      />
                     </div>
                   </div>
                   <br/>
-                  <div>
+                  <div className='registration__forget'>
                     <NavLink to={'*'}>
                       <span>Forgot password?</span>
                     </NavLink>
-                    <button>Sing In</button>
+                    <button type="submit">Sing In</button>
                   </div>
                 </form>
               </div>
             </div>
-            <div>
-              <h6>OR</h6>
-            </div>
-            <div>
-              <button><span>I</span>Continue with Facebook</button>
-              <button><span>I</span>Continue with Google</button>
-              <button><span>I</span>Continue with Github</button>
-            </div>
           </div>
-          <div className='registration__options'>
+          <div className='registration__forget'>
             <span><strong>Don´t have an account?</strong></span>
             <button>Sing Up</button>
           </div>
