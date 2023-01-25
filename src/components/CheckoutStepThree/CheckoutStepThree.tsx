@@ -1,10 +1,10 @@
-import React, {useContext} from 'react'
+import {useContext} from 'react';
 import { GlobalContext } from '../../Contexts/DataContext';
-import './CheckoutStepThree.scss'
 import { useNavigate } from "react-router-dom";
-import { getTotalPrice } from '../../Utils/helpers'
-import { FaCcVisa } from "react-icons/fa";
-import { IsetStepProps, IProduct } from '../../Types/types'
+import { getTotalPrice } from '../../Utils/helpers';
+import { IsetStepProps } from '../../Types/types';
+import { FaArrowLeft, FaCheck, FaCcVisa } from "react-icons/fa";
+import './CheckoutStepThree.scss';
 
 function CheckoutStepThree({setStep}:IsetStepProps) {
     const {orderData}: any = useContext(GlobalContext);
@@ -50,8 +50,8 @@ function CheckoutStepThree({setStep}:IsetStepProps) {
         </div>
         <br/>
         <div className='form__confirmation'>
-            <button  onClick={()=> setStep(2)} >Go Back</button>
-            <button onClick={()=> navigate(`/`)} >Confirm</button>
+            <button  onClick={()=> setStep(2)} ><FaArrowLeft/> Go Back</button>
+            <button onClick={()=> navigate(`/`)}><FaCheck/>Confirm</button>
         </div> 
     </form>
   )

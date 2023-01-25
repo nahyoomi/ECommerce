@@ -1,6 +1,5 @@
-import React, {useState} from 'react'
+import  {useState} from 'react';
 import './SubscriptionForm.scss';
-
 
 function SubscriptionForm() {
   const [ step, setStep]= useState(false)
@@ -27,13 +26,11 @@ function SubscriptionForm() {
 
   return (
     <div  className='fullform'>
-      {
-        step
+      {step
         ?
-        <div>
-          <h2>you {subscribe.email} has been successfully subscribed! {subscribe.name}  </h2>
+        <div className='fullform__subscribe'>
+          <p className='fullform__subscribe--text'> Hello! <strong>{subscribe.name}</strong>, you have been succefully subscribe with email: <strong>{subscribe.email}</strong>. Enjoy the benefits!</p>
         </div>
-        
         :
         <>
         <h2> Join our news and promotions!</h2>
@@ -58,7 +55,7 @@ function SubscriptionForm() {
                 min="3"
                 max="30"
             />
-            <button type="submit" >Subscribe</button>
+            <button type="submit">Subscribe</button>
         </form>
         </>
       }

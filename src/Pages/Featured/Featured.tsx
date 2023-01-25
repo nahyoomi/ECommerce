@@ -1,9 +1,8 @@
-import React, {useContext} from 'react'
+import {useContext} from 'react';
+import {GlobalContext} from '../../Contexts/DataContext';
+import Layout from '../../components/Layout/Layout';
 import BannerCarrousel from '../../components/BannerCarrousel/BannerCarrousel'
-import Layout from '../../components/Layout/Layout'
-import PLPGrid from '../../components/PLPGrid/PLPGrid'
-import Shelf from '../../components/Shelf/Shelf'
-import {GlobalContext} from '../../Contexts/DataContext'
+import PLPGrid from '../../components/PLPGrid/PLPGrid';
 import './Featured.scss'
 
 function Featured() {
@@ -22,4 +21,4 @@ function Featured() {
   )
 }
 
-export default Featured
+export default Featured;

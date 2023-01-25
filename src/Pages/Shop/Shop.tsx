@@ -1,13 +1,14 @@
-import React, {useContext} from 'react'
-import Filter from '../../components/Filter/Filter'
-import Layout from '../../components/Layout/Layout'
-import Orderby from '../../components/Orderby/Orderby'
-import PLPGrid from '../../components/PLPGrid/PLPGrid'
-import {GlobalContext} from '../../Contexts/DataContext'
-import './Shop.scss'
+import {useContext} from 'react';
+import {GlobalContext} from '../../Contexts/DataContext';
+import Layout from '../../components/Layout/Layout';
+import PLPGrid from '../../components/PLPGrid/PLPGrid';
+import Filter from '../../components/Filter/Filter';
+import Orderby from '../../components/Orderby/Orderby';
+import './Shop.scss';
 
 function Shop() {
-  const {productsFilter}: any = useContext(GlobalContext)
+  const {productsFilter}: any = useContext(GlobalContext);
+
   return (
     <Layout>
       <section className='section'>
@@ -24,4 +25,4 @@ function Shop() {
   )
 }
 
-export default Shop
+export default Shop;

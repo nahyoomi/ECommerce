@@ -1,8 +1,7 @@
-import React from 'react'
 import { HiMail } from "react-icons/hi";
 import { FaHeadset, FaReact } from "react-icons/fa";
 import './Footer.scss';
-import { NavLink } from 'react-router-dom';
+
 function Footer() {
   return (
     <div className='footer'>

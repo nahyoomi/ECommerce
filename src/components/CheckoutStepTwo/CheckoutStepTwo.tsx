@@ -1,15 +1,19 @@
-import React, {useContext} from 'react'
-import './CheckoutStepTwo.scss'
-import { getTotalPrice } from '../../Utils/helpers'
+import {useContext} from 'react';
 import { GlobalContext } from '../../Contexts/DataContext';
-import { IsetStepProps } from '../../Types/types'
+import { getTotalPrice } from '../../Utils/helpers';
+import { IsetStepProps } from '../../Types/types';
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import './CheckoutStepTwo.scss';
 
 function CheckoutStepTwo({setStep}:IsetStepProps) {
-    const {orderData, setOrderData}: any = useContext(GlobalContext);
+
+    const {orderData}: any = useContext(GlobalContext);
+
     const hanblesubmit =(e:any)=> {
         e.preventDefault();
         setStep(3)
     }
+
   return (
     <div className='shipping'>
         <h3 className='shipping__title'>Shipping Details</h3>
@@ -69,23 +73,21 @@ function CheckoutStepTwo({setStep}:IsetStepProps) {
             </div>
             <br/>  
             <div className='shipping__formulary--total'>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td><span>Subtotal:</span></td>
-                            <td><h4>$ { getTotalPrice(orderData) }</h4></td>
-                        </tr>
-                        <tr>
-                            <td><span>Total:</span></td>
-                            <td><h2>$ { getTotalPrice(orderData) }</h2></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div className='total' >
+                    <div className='total__subtotal' >
+                        <p>Subtotal:</p>
+                        <h4>$ { getTotalPrice(orderData) }</h4>
+                    </div>
+                    <div className='total__fullamount' >
+                        <p>Total:</p>
+                        <h2>$ { getTotalPrice(orderData) }</h2> 
+                    </div>
+                </div>
             </div>
             <br/>   
             <div className='shipping__formulary--actions'>
-                <button onClick={()=> setStep(1)}>Go Back</button>
-                <button type='submit'>Next Step</button>
+                <button  onClick={()=> setStep(1)}><FaArrowLeft/>Go Back</button>
+                <button type='submit'>Next Step <FaArrowRight/></button>
             </div>  
         </form>
 

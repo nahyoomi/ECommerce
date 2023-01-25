@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import { HiSearch } from "react-icons/hi";
 import './Search.scss';
-import { useNavigate } from "react-router-dom";
 
 export default function Search(){
-    const [word, setIWord] = useState('')
+    const [word, setIWord] = useState('');
+
     let navigate = useNavigate();
 
     const handleChange = (e:any) =>{
@@ -27,6 +28,7 @@ export default function Search(){
     return(
         <div className="search">
             <input
+                className="search__placeholder"
                 placeholder='What are you looking for?'
                 onChange={handleChange}
                 onKeyDown={handleKeyUp}

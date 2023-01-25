@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './MyAccount.scss';
-import { useNavigate } from 'react-router-dom'
 
 function MyAccount() {
   let navigate = useNavigate();
+
   return (
-    <div className='userBtn'>
-      <button>Sing Up</button>
+    <div className='useractions'>
+      <button onClick={()=>  navigate(`/login`) }>Sing Up</button>
       <button onClick={()=>  navigate(`/login`) }>Sign In</button>
     </div>
   )

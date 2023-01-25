@@ -2,12 +2,15 @@
 .accessing{
     max-width: 300px;
     margin: 30px auto;
-    padding: 30px 0;
     background: $primary-color;
     border: 1px solid  $dots;
+    &__fieldset{
+        padding: 10px 0;
+    }
     &__heading {
         &--title{
-            text-align: center;  
+            text-align: center;
+            margin: 10px;  
         }
     }
     &__form{
@@ -53,7 +56,7 @@
                 color: $primary-color;
                 font-weight: bold;
                 background: $Primary-titles;
-                border: 1px solid #BFBFBF;
+                border: 1px solid $dots;
                 padding: 10px;
                 margin: 0 36px;   
             }
@@ -62,7 +65,20 @@
             display: flex;
             justify-content: center;
             padding: 10px;
-            background: #BFBFBF;
+            align-items: baseline;
+            background: $secondary-color;
+            span{
+                font-size: 12px;
+                padding-right: 10px;
+                font-weight: bold;
+            }
+            button{
+                background-color: #FFFFFF;
+                border: 1px solid $dots;
+                padding: 8px;
+                color: $placeholder-text;
+                font-weight: bold;
+            }
         }
     }
 }

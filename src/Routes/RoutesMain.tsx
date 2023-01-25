@@ -14,17 +14,17 @@ import SearchPage from '../Pages/SearchPage/SearchPage';
 function RoutesMain() {
   return (
     <BrowserRouter>
-        <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/login' element={<Login/>}/>
-            <Route path='/shop' element={<Shop/>}/>
-            <Route path='/featured' element={<Featured/>}/>
-            <Route path='/recommended' element={<Recommended/>}/>
-            <Route path='/checkout' element={<Checkout/>}/>
-            <Route path='/notfound' element={<NotFound/>}/>
-            <Route path='/product/:id' element={<PageProduct/>}/>
-            <Route path='/search/:word' element={<SearchPage/>}/>
-        </Routes>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/shop' element={<Shop/>}/>
+        <Route path='/featured' element={<Featured/>}/>
+        <Route path='/recommended' element={<Recommended/>}/>
+        <Route path='/checkout' element={<Checkout/>}/>
+        <Route path='/notfound' element={<NotFound/>}/>
+        <Route path='/product/:id' element={<PageProduct/>}/>
+        <Route path='/search/:word' element={<SearchPage/>}/>
+      </Routes>
     </BrowserRouter>
   )
 }
