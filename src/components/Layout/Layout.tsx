@@ -1,13 +1,12 @@
-import React from 'react'
+import { IPropsChildren } from '../../Types/types';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
-import './Layout.scss'
-import { IPropsChildren } from '../../Types/types';
+import './Layout.scss';
 
 function Layout( { children }: IPropsChildren  ) {
 
   return (
-    <div className='container'>
+    <div className='layout'>
       <Header />
         <main>{children}</main>
       <Footer />

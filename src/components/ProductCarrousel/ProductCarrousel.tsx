@@ -1,17 +1,17 @@
-import {useEffect, useContext} from 'react'
-import './ProductCarrousel.scss'
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
-import { FreeMode, Pagination } from "swiper";
-import {IDataFilterProps} from '../../Types/types';
-import {ChangeShelf} from '../../Utils/helpers';
-import Shelf from '../Shelf/Shelf';
+import {useEffect, useContext} from 'react';
 import { GlobalContext } from '../../Contexts/DataContext';
+import {ChangeShelf} from '../../Utils/helpers';
+import {IDataFilterProps} from '../../Types/types';
+import { FreeMode, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/pagination";
+import "swiper/css/free-mode";
+import "swiper/css";
+import Shelf from '../Shelf/Shelf';
+import './ProductCarrousel.scss';
 
 function ProductCarrousel({category}:IDataFilterProps) {
-  const { adjustment, setAdjustment}: any = useContext(GlobalContext);
+  const {adjustment, setAdjustment}: any = useContext(GlobalContext);
   
   const handleChange = () => {
     setAdjustment(window.innerWidth);
@@ -35,7 +35,7 @@ function ProductCarrousel({category}:IDataFilterProps) {
         className="myswiperproducts"
       >
         {category.map((item)=>(
-          <SwiperSlide key={item.productId}className='swipercards'>
+          <SwiperSlide key={item.productId}className='swipercards' >
             <Shelf item={item}/>
           </SwiperSlide>
         ))}

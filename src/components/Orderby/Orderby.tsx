@@ -1,11 +1,11 @@
-import React,{useState,useContext} from 'react'
+import {useState,useContext} from 'react';
 import { GlobalContext } from '../../Contexts/DataContext';
-import {orderByProduct} from '../../Utils/helpers'
-import './Orderby.scss'
+import {orderByProduct} from '../../Utils/helpers';
+import './Orderby.scss';
 
 function Orderby() {
   const [value, setValue] = useState('')
-  const { productsFilter, setProductsFilter, products}:any = useContext(GlobalContext);
+  const {productsFilter, setProductsFilter}:any = useContext(GlobalContext);
 
   const handleChange = (e:any) => {
     setValue(e.target.value)
@@ -29,4 +29,4 @@ function Orderby() {
   )
 }
 
-export default Orderby
+export default Orderby;

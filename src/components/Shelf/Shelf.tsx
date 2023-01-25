@@ -1,11 +1,10 @@
 import { useContext } from "react";
-import "./Shelf.scss";
-import { useNavigate } from "react-router-dom";
-import { HiOutlineStar } from "react-icons/hi2";
-import {IitemProps,IProduct} from '../../Types/types'
 import { GlobalContext } from "../../Contexts/DataContext";
-import Swal from 'sweetalert2'
-import { Rating } from 'react-simple-star-rating'
+import { Rating } from 'react-simple-star-rating';
+import { useNavigate } from "react-router-dom";
+import {IitemProps,IProduct} from '../../Types/types';
+import Swal from 'sweetalert2';
+import "./Shelf.scss";
 
 function Shelf({item}: IitemProps) {
   const {orderData, setOrderData}: any = useContext(GlobalContext);
@@ -16,6 +15,7 @@ function Shelf({item}: IitemProps) {
     navigate(`/product/${item.productId}`);
     
   }
+
   const handleBuy = (event:any) => {
     event.stopPropagation();
     Swal.fire({
@@ -24,10 +24,9 @@ function Shelf({item}: IitemProps) {
       icon: 'success',
       confirmButtonText: 'Ok'
     })
-    const findRepeatElement = orderData.find((element: IProduct)=>element.productId === item.productId)
-    
+
+    const findRepeatElement = orderData.find((element: IProduct)=>element.productId === item.productId);
     if(findRepeatElement){
-      
       const newOrder = {
         ...findRepeatElement,
         "installments": [
@@ -56,13 +55,13 @@ function Shelf({item}: IitemProps) {
         </li>
       }
         <li className='cardcontainer__image'>
-            <img src={item.imageUrl}></img>
+          <img src={item.imageUrl}></img>
         </li>
         <li className='cardcontainer__item'>
-            <p>{item.productName}</p>
+          <p>{item.productName}</p>
         </li>
         <li className='cardcontainer__icons'>
-        <Rating size={20}  initialValue={item.stars } />
+          <Rating size={20}  initialValue={item.stars} />
         </li>
         <li className='cardcontainer__pricecross'>
           {item.listPrice === null
@@ -71,7 +70,7 @@ function Shelf({item}: IitemProps) {
           }
         </li>
         <li className='cardcontainer__price'>
-          <p>por {item.price} </p>
+          <p>$ {item.price}</p>
         </li>
         <li className='cardcontainer__btn'>
           <button onClick={handleBuy}>Add To Cart</button>
@@ -80,4 +79,4 @@ function Shelf({item}: IitemProps) {
   )
 }
 
-export default Shelf
+export default Shelf;

@@ -3,6 +3,11 @@
     background-color: $secondary-color;
     height: 260px;
     padding: 10px;
+    &__subscribe{
+        &--text{
+            text-align: center;
+        }
+    }
     h2{
         text-align: center;
     }

@@ -48,6 +48,13 @@
             }
         }
     }
+  }
+  .baskets{
+    &__text{
+      text-align: center;
+      color: $placeholder-text;
+      font-size: 12px;
+    }
   } 
   &--footer{
     border-top: 1px solid $dots;

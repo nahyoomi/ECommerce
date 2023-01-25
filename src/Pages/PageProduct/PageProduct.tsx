@@ -1,36 +1,33 @@
-import React, {useContext, useEffect, useState} from 'react'
-import Layout from '../../components/Layout/Layout'
-import { HiArrowNarrowLeft } from "react-icons/hi";
-import {NavLink, useParams} from "react-router-dom"
-import './PageProduct.scss'
-import ProductCarrousel from '../../components/ProductCarrousel/ProductCarrousel';
+import {useContext, useEffect, useState} from 'react';
 import { GlobalContext } from '../../Contexts/DataContext';
+import {NavLink, useParams} from "react-router-dom";
+import {getProduct} from '../../Utils/helpers';
 import { IProduct } from '../../Types/types';
-import {getProduct} from '../../Utils/helpers'
-import Swal from 'sweetalert2'
+import Layout from '../../components/Layout/Layout';
+import ProductCarrousel from '../../components/ProductCarrousel/ProductCarrousel';
+import { HiArrowNarrowLeft } from "react-icons/hi";
+import Swal from 'sweetalert2';
+import './PageProduct.scss';
 
 function PageProduct() {
-    const [ item, setItem]= useState<IProduct> ()
+    const [item, setItem]= useState<IProduct> ()
     const {products, orderData, setOrderData,productsRecommended}: any = useContext(GlobalContext)
     const {id} = useParams();
-
 
     useEffect(()=>{
         setItem(getProduct(products, id ))
     }, [])
 
-    const handleBuy = (event:any) => {
+    const handleBuy = () => {
         Swal.fire({
             title: 'Sucess!',
             text: 'Product has been added to your cart',
             icon: 'success',
             confirmButtonText: 'Ok'
-          })
+        })
 
-        const findRepeatElement = orderData.find((element: IProduct)=>element.productId === item?.productId)
-    
+    const findRepeatElement = orderData.find((element: IProduct)=>element.productId === item?.productId)
         if(findRepeatElement){
-          
           const newOrder = {
             ...findRepeatElement,
             "installments": [
@@ -41,7 +38,7 @@ function PageProduct() {
             ]
           }
           const nOrder= orderData.filter((element:IProduct)=> element.productId !== item?.productId )
-          setOrderData(
+            setOrderData(
              [...nOrder,newOrder ]
           )
           return;
@@ -52,13 +49,13 @@ function PageProduct() {
   return (
     <Layout>
     <>
-        <div className='pdpsection'>
-            <section className='pdpsection__backpage'>
-                <NavLink to={'/shop'}>
-                    <HiArrowNarrowLeft></HiArrowNarrowLeft> 
-                    <span>Back to shop</span>
-                </NavLink>
-            </section>
+    <div className='pdpsection'>
+        <section className='pdpsection__backpage'>
+            <NavLink to={'/shop'}>
+                <HiArrowNarrowLeft></HiArrowNarrowLeft> 
+                <span>Back to shop</span>
+            </NavLink>
+        </section>
         <div className='pdpsection__fullproduct'>
             <section className='section__image'>
                 <img  className='mainimage'src={item?.imageUrl}/>
@@ -73,9 +70,9 @@ function PageProduct() {
             </section>
             <section className='section__details'>
                 <div className='container'>
-                <h3 className='section__details--name'>{item?.productName}</h3>
-                <p className='section__details--description'> {item?.productDetail} </p>
-                <p className='section__details--select'>Type of the product</p>
+                    <h3 className='section__details--name'>{item?.productName}</h3>
+                    <p className='section__details--description'> {item?.productDetail}</p>
+                    <p className='section__details--select'>Type of the product</p>
                 <div>
                 <select className='section__details--selector'>
                     <option>--Select--</option>
@@ -104,14 +101,13 @@ function PageProduct() {
                 </div>
             </section>
         </div>
-            
-        </div> 
-        <h2 className='tittle'>Recommended</h2>
-        <hr className='line'/>
-        <ProductCarrousel category={productsRecommended} />
+    </div> 
+    <h2 className='tittle'>Recommended</h2>
+    <hr className='line'/>
+    <ProductCarrousel category={productsRecommended} />
     </>
     </Layout>
   )
 }
 
-export default PageProduct
+export default PageProduct;

@@ -1,14 +1,15 @@
-import {useEffect, useContext} from 'react'
-import './BannerCarrousel.scss'
-import images from '../../assets/images';
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import {useEffect, useContext} from 'react';
 import { GlobalContext } from '../../Contexts/DataContext';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
+import "swiper/css/pagination";
+import "swiper/css";
+import images from '../../assets/images';
+import './BannerCarrousel.scss';
 
 function BannerCarrousel() {
   const { adjustment, setAdjustment}: any = useContext(GlobalContext);
+  
   const handleChange = () => {
     setAdjustment(window.innerWidth);
   }

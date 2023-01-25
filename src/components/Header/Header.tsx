@@ -1,17 +1,13 @@
-import { useState } from "react";
-import DrawerCart from "../DrawerCart/DrawerCart";
 import MenuDropDown from "../MenuDropDown/MenuDropDown";
 import Search from "../Search/Search";
-import './Header.scss';
 import MyAccount from "../MyAccount/MyAccount";
 import Navbar from "../Navbar/Navbar";
+import DrawerCart from "../DrawerCart/DrawerCart";
 import { NavLink } from "react-router-dom";
+import './Header.scss';
 
 export default function Header(){
-  const [showMenu, setShowMenu]= useState(false);
-  const handleModal = ()=>{
-    setShowMenu(true)
-  }
+
   return(
     <header className="header">
       <div className='header__bar'>

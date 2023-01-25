@@ -1,13 +1,15 @@
-import { NavLink,useNavigate } from 'react-router-dom'
-import React, {useState} from 'react'
+import {useState} from 'react';
+import { NavLink,useNavigate } from 'react-router-dom';
 import Layout from '../../components/Layout/Layout'
-import './Login.scss'
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 import { FaArrowRight } from "react-icons/fa";
+import './Login.scss';
 
 function Login() {
+
   let navigate = useNavigate();
-  const [ subscribe, setSubscribe]= useState({
+
+  const [subscribe, setSubscribe]= useState({
     name:"",
     email:"",
   })
@@ -84,7 +86,7 @@ function Login() {
           </div>
         </div>
         <div className='accessing__fields--account'>
-          <span>Don´t have an account? </span>
+          <span>Don´t have an account?</span>
           <button>Sing Up</button>
         </div>
       </div>

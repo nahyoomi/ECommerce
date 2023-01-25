@@ -1,15 +1,14 @@
-import React from 'react'
-import Shelf from '../Shelf/Shelf'
-import {IDataArrayProducts, IProduct} from '../../Types/types'
-import './PLPGrid.scss'
+import {IDataArrayProducts, IProduct} from '../../Types/types';
+import Shelf from '../Shelf/Shelf';
+import './PLPGrid.scss';
 
 function PLPGrid( {products}: IDataArrayProducts) {
   
   return (
     <div className='grid'>
-    {products.map((item : IProduct )=>(
+      {products.map((item : IProduct )=>(
        <Shelf key= {item.productId} item={item}/>
-    ))}
+      ))}
     </div>
   )
 }

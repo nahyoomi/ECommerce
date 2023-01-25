@@ -1,5 +1,5 @@
 import {DataContextProvider} from './Contexts/DataContext';
-import RoutesMain from "./Routes/RoutesMain"
+import RoutesMain from "./Routes/RoutesMain";
 
 function App() {
 
