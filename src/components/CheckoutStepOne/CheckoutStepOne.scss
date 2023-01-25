@@ -1,3 +1,4 @@
+@import '../../Styles/vars';
 .summary{
     
     &__title{
@@ -27,9 +28,9 @@
         justify-content: space-between;
         &--shop{
             cursor: pointer;
-            background: #f2f2f2;
-            color: #7d7d7d;
-            border: 1px solid #e1e1e1;
+            background: $secondary-color;
+            color: $placeholder-text;
+            border: 1px solid $dots;
             padding:10px;
             position: relative;
             display: flex;
@@ -38,10 +39,10 @@
         }
         &--next{
             cursor: pointer;
-            background: #101010;
+            background: $Primary-titles;
             padding: 10px;
-            border: 1px solid #101010;
-            color: #fff;
+            border: 1px solid $Primary-titles;
+            color: $primary-color;
             font-weight: 700;
             position: relative;
             display: flex;
