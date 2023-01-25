@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     position: sticky;
-    background: white;
+    background: $primary-color;
     top: 0px;
     padding: 24px 0;
     margin-bottom: 30px;
@@ -55,8 +55,8 @@
                         font-size: 14px;
                         margin: 0;
                         padding: 1px;
-                        background: rgb(54, 54, 54);
-                        color: #fff;
+                        background: $secondary-titles;
+                        color: $primary-color;
                         border-radius: 50%;
                         width: 30px;
                         height: 30px;

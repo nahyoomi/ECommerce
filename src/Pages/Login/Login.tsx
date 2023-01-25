@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import Layout from '../../components/Layout/Layout'
 import './Login.scss'
 import Swal from 'sweetalert2'
+import { FaArrowRight } from "react-icons/fa";
 
 function Login() {
   let navigate = useNavigate();
@@ -34,59 +35,59 @@ function Login() {
 
   return (
     <Layout>
-        <div className='registration'>
-          <div className='registration__fields'>
-            <div>
-              <h3 className='registration__title' >Sing in to ShopIt!</h3>
-              <br/>
-              <div>
-                <form onSubmit={handleSubmit} >
-                  <div>
-                    <div className='registration__input'>
-                      <label>Email</label>
-                      <input
-                        name="email"
-                        type="email"
-                        value={subscribe.email}
-                        onChange={handleChange}
-                        placeholder='Enter your email'
-                        required
-                        min="3"
-                        max="30"
-                      />
-                    </div>
+      <div className='accessing'>
+        <div className='accessing__fieldset'>
+          <div className='accessing__heading'>
+            <h3 className='accessing__heading--title'>Sign in to ShopIt!</h3>
+            <br/>
+            <div className='accessing__body'>
+              <form onSubmit={handleSubmit} className='accessing__form'>
+                <div className='accessing__fields'>
+                  <div className='accessing__fields--item'>
+                    <label> *Email</label>
+                    <input
+                      name="email"
+                      type="email"
+                      value={subscribe.email}
+                      onChange={handleChange}
+                      placeholder='Enter your email'
+                      required
+                      min="3"
+                      max="30"
+                    />
                   </div>
-                  <div>
-                    <div className='registration__input'>
-                      <label>Password</label>
-                      <input
-                        name="name"
-                        type="password"
-                        value={subscribe.name}
-                        onChange={handleChange}
-                        placeholder='Enter your name'
-                        required
-                        min="3"
-                        max="30"
-                      />
-                    </div>
+                </div>
+                <div>
+                  <div className='accessing__fields--item'>
+                    <label> *Password</label>
+                    <input
+                      name="name"
+                      type="password"
+                      value={subscribe.name}
+                      onChange={handleChange}
+                      placeholder='Enter your name'
+                      required
+                      min="3"
+                      max="30"
+                    />
                   </div>
+                </div>
                   <br/>
-                  <div className='registration__forget'>
+                  <div className='accessing__fields--forget'>
                     <NavLink to={'*'}>
                       <span>Forgot password?</span>
                     </NavLink>
-                    <button type="submit">Sing In</button>
+                    <button type="submit">Sing In <FaArrowRight/></button>
                   </div>
-                </form>
-              </div>
+              </form>
             </div>
           </div>
-          <div className='registration__forget'>
-            <span><strong>Don´t have an account?</strong></span>
-            <button>Sing Up</button>
-          </div>
         </div>
+        <div className='accessing__fields--account'>
+          <span>Don´t have an account? </span>
+          <button>Sing Up</button>
+        </div>
+      </div>
     </Layout>
   )
 }

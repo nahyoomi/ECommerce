@@ -1,4 +1,4 @@
-
+@import '../../Styles/vars';
 .form{
     margin: 0 20px 33px 20px;
     &__title{
@@ -14,8 +14,8 @@
         align-items: end;
     }
     &__credit{
-        background: #d9d8d8;
-        border-bottom: 1px solid #adadad;
+        background: $secondary-color;
+        border-bottom: 1px solid $dots;
         display: flex;
         align-items: center;
 
@@ -34,10 +34,10 @@
 }
 
 .form__confirmation button:last-child{
-    background: #101010;
+    background: $Primary-titles;
     padding: 10px;
-    border: 1px solid #101010;
-    color: #fff;
+    border: 1px solid $Primary-titles;
+    color: $primary-color;
     font-weight: 700;
     position: relative;
     display: flex;
@@ -45,9 +45,9 @@
     justify-content: center;
   }
   .form__confirmation button:first-child{
-      background: #f2f2f2;
-      color: #7d7d7d;
-      border: 1px solid #e1e1e1;
+      background: $secondary-color;
+      color: $placeholder-text;
+      border: 1px solid $dots;
       padding: 10px;
       position: relative;
       display: flex;
